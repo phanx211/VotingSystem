@@ -8,7 +8,7 @@ Ballot::Ballot() {
 }
 
 Ballot::Ballot(int ballot, std::string type, int<> vote) {
-	ballot_no = ballot;
-	vote_type = type;
-	votes = vote;
+	this->ballot_no = ballot;
+	this->vote_type = type;
+	this->votes = vote;
 }

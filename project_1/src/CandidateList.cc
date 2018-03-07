@@ -6,7 +6,7 @@
 #include <vector>
 #include <string>
 
-#include "include/CandidateList.h"
+#include "../include/CandidateList.h"
 
 
 /*******************************************************************************

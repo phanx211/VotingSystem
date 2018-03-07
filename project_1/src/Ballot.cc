@@ -7,7 +7,7 @@
  ******************************************************************************/
 
 #include <string>
-#include "include/Ballot.h"
+#include "../include/Ballot.h"
 
 
 

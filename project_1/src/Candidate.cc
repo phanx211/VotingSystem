@@ -6,9 +6,9 @@
                       Ronny Yogiswara
  ******************************************************************************/
 
-#include "include/Candidate.h"
-#include "include/BallotList.h"
-#include "include/Ballot.h"
+#include "../include/Candidate.h"
+#include "../include/BallotList.h"
+#include "../include/Ballot.h"
 
 Candidate::Candidate() {
 	name = "";

@@ -10,8 +10,8 @@
 #include <vector>
 #include <algorithm>
 #include <cstdlib>
-#include "BallotList.h"
-#include "Ballot.h"
+#include "../include/BallotList.h"
+#include "../include/Ballot.h"
 
 using namespace std;
 

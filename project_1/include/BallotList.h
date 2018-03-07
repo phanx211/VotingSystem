@@ -15,7 +15,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "include/Ballot.h"
+#include "Ballot.h"
 
 /*!******************************************************************************
  * Class Definition
@@ -25,18 +25,22 @@ class BallotList {
 	public:
 		//Constructors
 		BallotList();
-		BallotList(Ballot<> ballots);
+		BallotList(std::vector<Ballot> ballots);
 
 		//Getters/Setters
-		Ballot<> get_ballot_list() {return ballot_list;}
-		void set_ballot_list(Ballot<> ballots) {ballot_list = ballots;}
+		std::vector<Ballot> get_ballot_list() {return ballot_list;}
+		void set_ballot_list(std::vector<Ballot> ballots) {ballot_list = ballots;}
 
 		//Methods
 		void ShuffleBallots();
 		Ballot RemoveBallot(int voter_no);
 		void AddBallot(Ballot ballot);
-		int Size();
+		int ListSize();
+    int myrandom (int i);
 
 	private:
-		Ballot<> ballot_list;
+		std::vector<Ballot> ballot_list;
 };
+
+
+#endif  // PROJECT_INCLUDE_BALLOTLIST_H_

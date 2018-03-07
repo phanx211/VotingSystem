@@ -34,7 +34,7 @@ class BallotList {
 		//Methods
 		void ShuffleBallots();
 		Ballot RemoveBallot(int voter_no);
-		void AddBallot(int ballot_no);
+		void AddBallot(Ballot ballot);
 		int Size();
 
 	private:

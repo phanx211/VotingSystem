@@ -22,7 +22,7 @@ BallotList::BallotList(Ballot<> ballots) {
 	this->ballot_list = ballots;
 }
 
-BallotList::ShuffleBallots() {
+void BallotList::ShuffleBallots() {
 	std::random_shuffle(ballot_list.begin(), ballot_list.end());
 	int i=1;
 	for (Ballot b:ballot_list) {
@@ -31,7 +31,7 @@ BallotList::ShuffleBallots() {
 	}
 }
 
-BallotList::RemoveBallot(int ballot_no) {
+Ballot BallotList::RemoveBallot(int ballot_no) {
 	int i=0;
 	Ballot temp=NULL;
 	for (Ballot b:ballot_list) {
@@ -45,4 +45,10 @@ BallotList::RemoveBallot(int ballot_no) {
 	return temp;
 }
 
+void BallotList::AddBallot(Ballot ballot) {
+	ballot_list.push_back(ballot);
+}
 
+int BallotList::Size() {
+	return ballot_list.size();
+}

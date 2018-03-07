@@ -7,8 +7,8 @@ Ballot::Ballot() {
 	votes = NULL;
 }
 
-Ballot::Ballot(int ballot, std::string type, int<> votes) {
+Ballot::Ballot(int ballot, std::string type, int<> vote) {
 	ballot_no = ballot;
 	vote_type = type;
-	votes = votes;
+	votes = vote;
 }

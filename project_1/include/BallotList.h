@@ -33,11 +33,10 @@ class BallotList {
 
 		//Methods
 		void ShuffleBallots();
-		void ReadFile(std::string file);
 		Ballot RemoveBallot(int voter_no);
-		void AddBallot(Ballot ballot);
+		void AddBallot(int ballot_no);
 		int Size();
 
 	private:
 		Ballot<> ballot_list;
-}
+};

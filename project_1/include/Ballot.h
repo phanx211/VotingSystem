@@ -40,4 +40,4 @@ class Ballot {
 		int ballot_no;
 		std::string vote_type;
 		int<> votes;
-}
+};

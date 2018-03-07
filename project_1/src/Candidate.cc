@@ -6,14 +6,13 @@
                       Ronny Yogiswara
  ******************************************************************************/
 
-#include "include/Candidate.h"
-#include "include/BallotList.h"
-#include "include/Ballot.h"
+#include "../include/Candidate.h"
+#include "../include/BallotList.h"
+#include "../include/Ballot.h"
 
 Candidate::Candidate() {
-	name = NULL;
+	name = "";
 	num_ballots = 0;
-	votes = NULL;
 }
 
 Candidate::Candidate(std::string name, int num_ballots, BallotList votes) {
@@ -21,5 +20,3 @@ Candidate::Candidate(std::string name, int num_ballots, BallotList votes) {
 	this->num_ballots = num_ballots;
 	this->votes = votes;
 }
-
-

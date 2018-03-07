@@ -1,1 +1,3 @@
-//#include <cxxtest/TestSuite.h>
+#include <cxxtest/TestSuite.h>
+#include "Ballot.h"
+#include "BallotList.h"

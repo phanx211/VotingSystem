@@ -11,8 +11,8 @@
 ******************************************************************************/
 #include <string>
 #include <iostream>
-#include "include/BallotList.h"
-#include "include/Ballot.h"
+#include "BallotList.h"
+#include "Ballot.h"
 
 class Candidate {
 	public:
@@ -31,5 +31,5 @@ class Candidate {
 	private:
 		std::string name;
 		int num_ballots;
-		BallotList votes; 		
-}
+		BallotList votes;
+};

@@ -25,11 +25,8 @@ class BallotList {
 	public:
 		//Constructors
 		BallotList();
-<<<<<<< HEAD
-		BallotList(Ballot <> ballots);
-=======
+
 		BallotList(std::vector<Ballot> ballots);
->>>>>>> 8556ff3bf6e60babced6cf319325b2d608301c42
 
 		//Getters/Setters
 		std::vector<Ballot> get_ballot_list() {return ballot_list;}
@@ -40,7 +37,8 @@ class BallotList {
 		Ballot RemoveBallot(int voter_no);
 		void AddBallot(Ballot ballot);
 		int ListSize();
-    int myrandom (int i);
+		void MakeBallot(std::string data);
+		void ReadFile(std::string filename);
 
 	private:
 		std::vector<Ballot> ballot_list;

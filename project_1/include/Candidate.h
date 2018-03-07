@@ -25,9 +25,9 @@ class Candidate {
 		int get_num_ballots() {return num_ballots;}
 		BallotList get_votes() {return votes;}
 
-		void set_name(std::string name) {name = name;}
-		void set_num_ballots(int num) {num_ballots = num;}
-		void set_votes(BallotList votes) {votes = votes;}
+		void set_name(std::string name) {this->name = name;}
+		void set_num_ballots(int num) {this->num_ballots = num;}
+		void set_votes(BallotList votes) {this->votes = votes;}
 	private:
 		std::string name;
 		int num_ballots;

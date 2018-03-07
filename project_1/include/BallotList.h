@@ -25,7 +25,7 @@ class BallotList {
 	public:
 		//Constructors
 		BallotList();
-		BallotList(Ballot<> ballots);
+		BallotList(Ballot <> ballots);
 
 		//Getters/Setters
 		Ballot<> get_ballot_list() {return ballot_list;}

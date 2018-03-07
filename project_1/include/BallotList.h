@@ -38,7 +38,8 @@ class BallotList {
 		Ballot RemoveBallot(int voter_no);
 		void AddBallot(Ballot ballot);
 		int ListSize();
-    int myrandom (int i);
+		void MakeBallot(std::string data);
+		void ReadFile(std::string filename);
 
 	private:
 		int num_ballots;

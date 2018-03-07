@@ -6,14 +6,15 @@
 #include <vector>
 #include <string>
 
-#include "CandidateList.h"
+#include "inclde/CandidateList.h"
+
 
 /*******************************************************************************
  * Class Definitions
  ******************************************************************************/
 
 CandidateList::CandidateList() {
-  candidate_list = NULL;
+  candidate_list = new std::vector<> ;
 }
 
 void CandidateList::Add(Candidate c) {
@@ -30,11 +31,26 @@ Candidate CandidateList::Remove(std::string name) {
       break;
     }
   }
-  candidate_list.erase(myvector.begin()+i);
+  Candidate temp = (candidate_list.begin()+i);
+  candidate_list.erase(candidate_list.begin()+i);
+  return temp;
 
 }
 
-Candidate CandidateList::ReturnLoser(std::string name){
+Candidate CandidateList::ReturnLoser(std::string name) {
+  Candidate lowest=candidate_list;
+  for (Candidate c:candidate_list) {
+    if (c.get_num_ballots()<lowest.get_num_ballots()) {
+      lowest=c;
+    }
+    else if (c.get_num_ballots()==lowest.get_num_ballots()) {
+      if (c.get_votes().front().get_ballot_no()<lowest.get_votes().front().get_ballot_no()) {
+        lowest=c;
+      }
+      }
+    }
+    return c;
+  }
 
 }
 

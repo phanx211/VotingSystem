@@ -39,7 +39,7 @@ class BallotList {
 		void AddBallot(Ballot ballot);
 		int ListSize();
 		void MakeBallot(std::string data);
-		void ReadFile(std::string filename);
+		void ReadFile(std::string filename, int num_ballots);
 
 	private:
 		int num_ballots;

@@ -114,13 +114,16 @@ void BallotList::MakeBallot(string data) {
 	this->AddBallot(new_ballot);
 }
 
-void BallotList::ReadFile(string filename) {
+void BallotList::ReadFile(string filename, int num_ballots) {
 	ifstream infile;
 	infile.open(filename.c_str());
 	string data;
 	getline(infile,data,'\n');
-	for (int i=0; i<this->num_ballots; i++) {
+	cout << data << endl;
+	cout << "in ReadFile" << endl;
+	for (int i=0; i<num_ballots; i++) {
 		getline(infile,data,'\n');
+		cout << "in for loop" << endl;
 		MakeBallot(data);
 	}
 }

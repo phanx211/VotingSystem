@@ -53,7 +53,3 @@ Candidate CandidateList::ReturnLoser() {
 int CandidateList::ListSize(){
   return candidate_list.size();
 }
-
-int main(){
-  return 0;
-}

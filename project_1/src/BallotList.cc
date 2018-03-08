@@ -10,6 +10,8 @@
 #include <vector>
 #include <algorithm>
 #include <cstdlib>
+#include <iostream>
+#include <fstream>
 #include "../include/BallotList.h"
 #include "../include/Ballot.h"
 
@@ -57,37 +59,37 @@ int BallotList::ListSize() {
 	return ballot_list.size();
 }
 
-void MakeBallot(string data) {
+void BallotList::MakeBallot(string data) {
 	vector<int> votes;
 
 	// If the first element is a comma, immediately append a 0 to the vector
-	char c = line[0];
-	if ((line[0] == ',') || (line[0] == ' ')) {
+	char c = data[0];
+	if ((data[0] == ',') || (data[0] == ' ')) {
 		votes.push_back(0);
 	}
 	else { // Otherwise, convert the element to an integer and append to vector
 		int a = c-'0';
 		votes.push_back(a);
 	}
-	char previous = line[0]; // previous is used to store the previous
+	char previous = data[0]; // previous is used to store the previous
 																	// character in the string
 
-	// Start iterating through the line, starting at the 2nd character
-	for (int i = 1; i < line.length()-1; i++) {
-		char s = line[i];
+	// Start iterating through the data, starting at the 2nd character
+	for (int i = 1; i < data.length()-1; i++) {
+		char s = data[i];
 		// If the current character is a space, add a 0
-		if (line[i] == ' ') {
+		if (data[i] == ' ') {
 			votes.push_back(0);
 			previous = s;
 		}
 		// If the current character is a comma as well as the previous, add a 0
-		else if ((line[i] == ',') && (previous == ',')) {
+		else if ((data[i] == ',') && (previous == ',')) {
 			votes.push_back(0);
 		}
 
 		// If the current character is not a comma, convert character to int and add
 		// to vector
-		else if ((line[i] != ',') && (line[i] != ' ')) {
+		else if ((data[i] != ',') && (data[i] != ' ')) {
 			int b = s - '0';
 			int c = b;
 			if ((previous != ',') && (previous != ' ')) {
@@ -104,53 +106,21 @@ void MakeBallot(string data) {
 	}
 
 	// If the last character of the string is a comma, add a 0
-	if ((line[line.length()-1] == ',') || (line[line.length()-1] == ' ')) {
+	if ((data[data.length()-1] == ',') || (data[data.length()-1] == ' ')) {
 		votes.push_back(0);
 	}
 
-	Ballot new_ballot = new Ballot(0,votes);
+	Ballot new_ballot(0,votes);
 	this->AddBallot(new_ballot);
 }
 
-void ReadFile(string filename) {
+void BallotList::ReadFile(string filename) {
 	ifstream infile;
-	infile.open(filename);
-	string line;
-	getline(infile,line,'\n');
+	infile.open(filename.c_str());
+	string data;
+	getline(infile,data,'\n');
 	for (int i=0; i<this->num_ballots; i++) {
-		getline(infile,line,'\n');
-		MakeBallot(line);
+		getline(infile,data,'\n');
+		MakeBallot(data);
 	}
 }
-/*
-int main(void){
-  BallotList x;
-  Ballot t;
-  t.set_ballot_no(5);
-  Ballot f;
-  f.set_ballot_no(4);
-  Ballot c;
-  c.set_ballot_no(3);
-  Ballot a;
-  a.set_ballot_no(2);
-  Ballot b;
-  b.set_ballot_no(1);
-  x.AddBallot(b);
-  x.AddBallot(a);
-  x.AddBallot(c);
-  x.AddBallot(f);
-  x.AddBallot(t);
-  x.ShuffleBallots();
-  x.ShuffleBallots();
-  cout << x.get_ballot_list()[0].get_ballot_no() << endl;
-  cout << x.get_ballot_list()[1].get_ballot_no() << endl;
-  cout << x.get_ballot_list()[2].get_ballot_no() << endl;
-  cout << x.get_ballot_list()[3].get_ballot_no() << endl;
-  cout << x.get_ballot_list()[4].get_ballot_no() << endl;
-
-  //cout << x.ListSize() << endl;
-
-
-  return 0;
-}
-*/

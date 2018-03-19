@@ -53,15 +53,10 @@ Candidate CandidateList::ReturnLoser() {
 
 Candidate CandidateList::ReturnWinner() {
   Candidate highest=candidate_list[1];
-  for (Candidate c:candidate_list) {
-    if (c.get_num_ballots()>highest.get_num_ballots()) {
+  for (int i=0;i<candidate_list.size();i++) {
+    if (candidate_list.at(i).get_num_ballots()>highest.get_num_ballots()) {
       highest=c;
     }
-    // else if (c.get_num_ballots()==highest.get_num_ballots()) {
-    //   if (c.get_votes().get_ballot_list().back().get_ballot_no()>highest.get_votes().get_ballot_list().back().get_ballot_no()) {
-    //     highest=c;
-    //   }
-    // }
   }
   return highest;
 }

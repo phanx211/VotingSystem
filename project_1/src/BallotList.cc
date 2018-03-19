@@ -37,16 +37,17 @@ void BallotList::ShuffleBallots() {
 	// }
 }
 
+
+
 Ballot BallotList::RemoveBallot(int ballot_no) {
 	int i=0;
 	Ballot temp;
-	for (Ballot b:ballot_list) {
-		if (b.get_ballot_no() == ballot_no) {
+	for (int i=0;i<ballot_list.size();i++) {
+		if (ballot_list.at(i).get_ballot_no() == ballot_no) {
 			temp = ballot_list.at(i);
 			ballot_list.erase(ballot_list.begin()+i);
 			break;
 		}
-		i++;
 	}
 	return temp;
 }

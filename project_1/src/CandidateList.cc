@@ -55,7 +55,7 @@ Candidate CandidateList::ReturnWinner() {
   Candidate highest=candidate_list[1];
   for (int i=0;i<candidate_list.size();i++) {
     if (candidate_list.at(i).get_num_ballots()>highest.get_num_ballots()) {
-      highest=c;
+      highest=candidate_list.at(i);
     }
   }
   return highest;

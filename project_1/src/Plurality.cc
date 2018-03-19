@@ -36,7 +36,9 @@ int Plurality::ReturnHighestVoteIndex(Ballot b) {
 void Plurality::Algorithm() {
   int bal_no;
   int highest_index;
-  // 'ballots' refer to intial ballots from csv file
+
+  // The following loop goes through the original list of ballots and distributes
+  // the ballots to the respective candidate based on the rankings on the ballot
   for (int i = 0; i < get_num_ballots(); i++) {
     // Gets the highest vote index in a given ballot from 'ballots'
     highest_index=ReturnHighestVoteIndex(get_ballots().get_ballot_list()[0]);
@@ -51,7 +53,9 @@ void Plurality::Algorithm() {
   for (int i = 0; i < get_candidates().get_candidate_list().size(); i++) {
     cout << "Candidate: " << i << " Votes: " << get_candidates().get_candidate_list()[i].get_votes().ListSize() << endl;
   }
-  // cout << "WINNER IS: " << get_candidates().ReturnWinners().get_name() << '\n';
+
+  // Run the ReturnWinners function from candidate_list which will fill a winner
+  // vector with the candidates that won the seats
   vector<Candidate> winners = get_candidates().ReturnWinners(get_num_seats());
   cout << "WINNER[S] ARE: ";
   for (int i = 0; i<winners.size(); i++) {

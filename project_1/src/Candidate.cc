@@ -10,12 +10,14 @@
 #include "../include/BallotList.h"
 #include "../include/Ballot.h"
 
+// Default constructor
 Candidate::Candidate() {
 	name = "";
 	num_ballots = 0;
 	BallotList votes;
 }
 
+// Constructor that takes in the candidates name and number of ballots (number of votes)
 Candidate::Candidate(std::string name, int num_ballots) {
 	this->name = name;
 	this->num_ballots = num_ballots;

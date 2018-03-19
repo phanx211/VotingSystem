@@ -17,28 +17,26 @@
 
 using namespace std;
 
+// Default Constructor
 BallotList::BallotList() {
 	vector<Ballot> ballot_list;
 	this->ballot_list = ballot_list;
 	num_ballots = 0;
 }
 
-
+// Constructor that sets ballot_list and num_ballots
 BallotList::BallotList(std::vector<Ballot> ballots, int num) {
 	this->ballot_list = ballots;
 	this->num_ballots = num;
 }
 
+// Shuffles the order of ballot_list
 void BallotList::ShuffleBallots() {
   std::random_shuffle ( ballot_list.begin(), ballot_list.end() );
-	// for (Ballot b:ballot_list) {
-	// 	b.set_ballot_no(i);
-	// 	i++;
-	// }
 }
 
 
-
+// Removes a ballot object from ballot_list and returns it
 Ballot BallotList::RemoveBallot(int ballot_no) {
 	int i=0;
 	Ballot temp;
@@ -52,16 +50,18 @@ Ballot BallotList::RemoveBallot(int ballot_no) {
 	return temp;
 }
 
+// Adds a ballot to ballot_list
 void BallotList::AddBallot(Ballot ballot) {
-	// std::cout << "Adding " << ballot.get_ballot_no() << '\n';
 	ballot_list.push_back(ballot);
-	// std::cout << "Size is now" << ballot_list.size() << '\n';
 }
 
+// Returns the number of ballots in ballot_list
 int BallotList::ListSize() {
 	return ballot_list.size();
 }
 
+// Takes a line of the csv file (a single ballot), creates a ballot object, and translates
+// the line of commas/numbers to a vector representing the votes on the ballot
 void BallotList::MakeBallot(string data) {
 	vector<int> votes;
 
@@ -117,6 +117,8 @@ void BallotList::MakeBallot(string data) {
 	this->AddBallot(new_ballot);
 }
 
+// Reads through the csv file containing the ballots and runs MakeBallot on 
+// each line that is a ballot
 void BallotList::ReadFile(string filename, int num_ballots) {
 	ifstream infile;
 	infile.open(filename.c_str());

@@ -27,9 +27,10 @@ public:
   void Add(Candidate c);
   Candidate Remove(std::string name);
   Candidate ReturnLoser();
+  Candidate ReturnWinner();
   int ListSize();
 
-  std::vector<Candidate> get_candidate_list(){return candidate_list;}
+  std::vector<Candidate>& get_candidate_list(){return candidate_list;}
   void set_candidate_list(std::vector<Candidate> cl) {candidate_list = cl;}
 private:
   std::vector<Candidate> candidate_list;

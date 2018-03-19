@@ -13,6 +13,8 @@
  * Class Definitions
  ******************************************************************************/
 
+using namespace std;
+
 CandidateList::CandidateList() {
 }
 
@@ -47,6 +49,21 @@ Candidate CandidateList::ReturnLoser() {
     }
   }
   return lowest;
+}
+
+Candidate CandidateList::ReturnWinner() {
+  Candidate highest=candidate_list[1];
+  for (Candidate c:candidate_list) {
+    if (c.get_num_ballots()>highest.get_num_ballots()) {
+      highest=c;
+    }
+    // else if (c.get_num_ballots()==highest.get_num_ballots()) {
+    //   if (c.get_votes().get_ballot_list().back().get_ballot_no()>highest.get_votes().get_ballot_list().back().get_ballot_no()) {
+    //     highest=c;
+    //   }
+    // }
+  }
+  return highest;
 }
 
 

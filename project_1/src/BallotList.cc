@@ -52,7 +52,9 @@ Ballot BallotList::RemoveBallot(int ballot_no) {
 }
 
 void BallotList::AddBallot(Ballot ballot) {
+	// std::cout << "Adding " << ballot.get_ballot_no() << '\n';
 	ballot_list.push_back(ballot);
+	// std::cout << "Size is now" << ballot_list.size() << '\n';
 }
 
 int BallotList::ListSize() {
@@ -75,7 +77,7 @@ void BallotList::MakeBallot(string data) {
 																	// character in the string
 
 	// Start iterating through the data, starting at the 2nd character
-	for (int i = 1; i < data.length()-1; i++) {
+	for (unsigned i = 1; i < data.length()-1; i++) {
 		char s = data[i];
 		// If the current character is a space, add a 0
 		if (data[i] == ' ') {
@@ -106,11 +108,11 @@ void BallotList::MakeBallot(string data) {
 	}
 
 	// If the last character of the string is a comma, add a 0
-	if ((data[data.length()-1] == ',') || (data[data.length()-1] == ' ')) {
+	if ((data[data.length()-1] == ',') || (data[data.length()-2] == ' ') || (data[data.length()-2] == ',')) {
 		votes.push_back(0);
 	}
 
-	Ballot new_ballot(0,votes);
+	Ballot new_ballot(ListSize()+1,votes);
 	this->AddBallot(new_ballot);
 }
 
@@ -119,9 +121,10 @@ void BallotList::ReadFile(string filename, int num_ballots) {
 	infile.open(filename.c_str());
 	string data;
 	getline(infile,data,'\n');
+	// std::cout << data << '\n';
 	for (int i=0; i<num_ballots; i++) {
 		getline(infile,data,'\n');
-		cout << data << endl;
+		//cout << data << endl;
 		MakeBallot(data);
 	}
 	infile.close();

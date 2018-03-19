@@ -18,12 +18,12 @@ class Candidate {
 	public:
 		//Constructors
 		Candidate();
-		Candidate(std::string name, int num_ballots, BallotList votes);
+		Candidate(std::string name, int num_ballots);
 
 		// Getters/Setters
 		std::string get_name() {return name;}
-		int get_num_ballots() {return num_ballots;}
-		BallotList get_votes() {return votes;}
+		int get_num_ballots() {return votes.ListSize();}
+		BallotList& get_votes() {return votes;}
 
 		void set_name(std::string name) {this->name = name;}
 		void set_num_ballots(int num) {this->num_ballots = num;}

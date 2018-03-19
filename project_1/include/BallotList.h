@@ -28,7 +28,7 @@ class BallotList {
 		BallotList(std::vector<Ballot> ballots, int num_ballots);
 
 		//Getters/Setters
-		std::vector<Ballot> get_ballot_list() {return ballot_list;}
+		std::vector<Ballot>& get_ballot_list() {return ballot_list;}
 		int get_num_ballots() {return num_ballots;}
 		void set_ballot_list(std::vector<Ballot> ballots) {ballot_list = ballots;}
 		void set_num_ballots(int num) { num_ballots = num;}

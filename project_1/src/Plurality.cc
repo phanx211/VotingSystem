@@ -34,47 +34,27 @@ int Plurality::ReturnHighestVoteIndex(Ballot b) {
 }
 
 void Plurality::Algorithm() {
-
-  /* Go through ballots in Ballot List, find highest vote
-  and move that Ballot from votes into the respective Candidate
-  */
-  // Candidate a("a", 0);
-  // Candidate b("b", 0);
-  // Candidate c("c", 0);
-  // Candidate d("d", 0);
-  // Candidate e("e", 0);
-  // Candidate f("f", 0);
-  // Candidate g("g", 0);
-  // Candidate h("h", 0);
-  // Candidate i("i", 0);
-  //
-  // candidates.Add(a);
-  // candidates.Add(b);
-  // candidates.Add(c);
-  // candidates.Add(d);
-  // candidates.Add(e);
-  // candidates.Add(f);
-  // candidates.Add(g);
-  // candidates.Add(h);
-  // candidates.Add(i);
-
-  int temp;
-  int highest;
-
+  int bal_no;
+  int highest_index;
+  cout << "Number of seats: " << get_num_seats() << endl;
+  cout << "Ballot list size: " << get_ballots().ListSize() << endl;
   // 'ballots' refer to intial ballots from csv file
-  for (int i = 0; i < ballots.ListSize(); i++) {
+
+  for (int i = 0; i < get_ballots().ListSize(); i++) {
     // Gets the highest vote index in a given ballot from 'ballots'
-    highest=ReturnHighestVoteIndex(ballots.get_ballot_list()[i]);
+    highest_index=ReturnHighestVoteIndex(get_ballots().get_ballot_list()[i]);
 
-    // Uses that index to get the ballot no of the highest vote
-    temp=ballots.get_ballot_list()[i].get_ballot_no();
+    // Gets ballot no of current ballot
+    bal_no=get_ballots().get_ballot_list()[i].get_ballot_no();
 
-    // Moves Ballot from 'ballots' to candidate using the ballot no in 'temp'
-    MoveBallot(temp, ballots, candidates.get_candidate_list()[highest].get_votes());
+    // Moves Ballot from 'ballots' to candidate using the ballot no in 'bal_no'
+    MoveBallot(bal_no, get_ballots(), get_candidates().get_candidate_list()[highest_index].get_votes());
   }
 
-
-  std::cout << "WINNER IS " << candidates.ReturnWinner().get_name() << '\n';
+  for (int i = 0; i < get_candidates().get_candidate_list().size(); i++) {
+    cout << "Candidate: " << i << " Votes: " << get_candidates().get_candidate_list()[i].get_votes().ListSize() << endl;
+  }
+  cout << "WINNER IS " << get_candidates().ReturnWinner().get_name() << '\n';
 
 
 }

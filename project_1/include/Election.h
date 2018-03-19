@@ -44,10 +44,10 @@ class Election {
 		int get_num_ballots() {return num_ballots;}
 		void set_num_ballots(int b) {num_ballots = b;}
 
-		CandidateList get_candidates() {return candidates;}
+		CandidateList& get_candidates() {return candidates;}
 		void set_votes(CandidateList cs) {candidates = cs;}
 
-		BallotList get_ballots() {return ballots;}
+		BallotList& get_ballots() {return ballots;}
 		void set_ballots(BallotList bs) {ballots = bs;}
 
 		//Pushes a string to a log file
@@ -59,9 +59,9 @@ class Election {
 		// Moves ballot from one place to another
 		void MoveBallot(int bal_no, BallotList& src, BallotList& dst);
 
-		void ReadFile(string filename);
+		void ReadNames(string filename);
 
-	public:
+	private:
 		int num_seats;
 		int num_candidates;
 		int num_ballots;

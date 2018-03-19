@@ -14,6 +14,7 @@ int main(int argc, char *argv[]) {
   */
 
   std::string vote_type_(argv[4]);
+  std::string filename(argv[5]);
   if (vote_type_ == "Plurality"){
 
 
@@ -22,8 +23,8 @@ int main(int argc, char *argv[]) {
 
 
     BallotList init_ballots_;
-    testp.ReadFile("ex.csv");
-    init_ballots_.ReadFile("ex.csv",atoi(argv[3]));
+    testp.ReadNames(filename);
+    init_ballots_.ReadFile(filename,atoi(argv[3]));
     for (int i = 0; i < init_ballots_.ListSize(); i++) {
       for (unsigned j = 0; j < init_ballots_.get_ballot_list()[i].get_votes().size(); j++ ) {
         cout << init_ballots_.get_ballot_list()[i].get_votes()[j] << " ";

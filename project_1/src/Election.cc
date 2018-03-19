@@ -28,12 +28,13 @@ Election::Election(int total_seats, int total_candidates, int total_ballots){
 }
 
 void Election::MoveBallot(int bal_no, BallotList& src, BallotList& dst) {
+	cout << "In election. bal_no: " << bal_no << endl;
 	Ballot temp=src.RemoveBallot(bal_no);
 	dst.AddBallot(temp);
 	// std::cout << "SIZE OF DST IS NOW " <<dst.get_ballot_list().size()<< '\n';
 }
 
-void Election::ReadFile(string filename) {
+void Election::ReadNames(string filename) {
 	ifstream infile;
 	infile.open(filename.c_str());
 	string data;

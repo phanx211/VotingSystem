@@ -4,7 +4,9 @@
 #include <cmath>
 #include <iostream>
 #include <vector>
+#include <algorithm>
 #include <string>
+#include <cstdlib>
 
 #include "../include/CandidateList.h"
 
@@ -57,6 +59,26 @@ Candidate CandidateList::ReturnWinner() {
     }
   }
   return highest;
+}
+
+vector<Candidate> CandidateList::ReturnWinners(int no_seats) {
+  vector<Candidate> winners;
+  int random = rand() % candidate_list.size();
+  random = rand() % candidate_list.size();
+  for (int k = 0; k < random; k++) {
+    random_shuffle(candidate_list.begin(),candidate_list.end());
+  }
+  Candidate highest=candidate_list[0];
+  for (int j = 0; j<no_seats; j++) {
+    for (int i=0;i<candidate_list.size();i++) {
+      if (candidate_list.at(i).get_num_ballots()>highest.get_num_ballots()) {
+        highest=candidate_list.at(i);
+      }
+    }
+    winners.push_back(this->Remove(highest.get_name()));
+    highest = candidate_list[0];
+  }
+  return winners;
 }
 
 

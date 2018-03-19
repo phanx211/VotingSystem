@@ -1,9 +1,11 @@
 #include "../include/BallotList.h"
 #include "../include/Plurality.h"
+#include <time.h>
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
+  srand(time(NULL));
 
   /*
   argv[1] = no of candidates

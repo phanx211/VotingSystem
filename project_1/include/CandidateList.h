@@ -28,6 +28,7 @@ public:
   Candidate Remove(std::string name);
   Candidate ReturnLoser();
   Candidate ReturnWinner();
+  std::vector<Candidate> ReturnWinners(int num_seats);
   int ListSize();
 
   std::vector<Candidate>& get_candidate_list(){return candidate_list;}

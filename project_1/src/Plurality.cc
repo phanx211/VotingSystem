@@ -41,6 +41,7 @@ void Plurality::Algorithm() {
   // 'ballots' refer to intial ballots from csv file
 
   for (int i = 0; i < get_ballots().ListSize(); i++) {
+    cout << "i: " << i << endl;
     // Gets the highest vote index in a given ballot from 'ballots'
     highest_index=ReturnHighestVoteIndex(get_ballots().get_ballot_list()[i]);
 

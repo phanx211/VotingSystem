@@ -32,7 +32,8 @@ int Plurality::ReturnHighestVoteIndex(Ballot b) {
   }
   return min_index;
 }
-
+// The plurality algorithm reads the ballots and distributes them to the respective candidates.
+// It then calls ReturnWinners which will return the winners of the seats
 void Plurality::Algorithm() {
   int bal_no;
   int highest_index;
@@ -57,9 +58,17 @@ void Plurality::Algorithm() {
   // Run the ReturnWinners function from candidate_list which will fill a winner
   // vector with the candidates that won the seats
   vector<Candidate> winners = get_candidates().ReturnWinners(get_num_seats());
-  cout << "WINNER[S] ARE: ";
+  if (get_num_seats() > 1) {
+	cout << "THE WINNERS ARE: ";
+  }
+  else {
+  	  cout << "THE WINNER IS: ";
+  }
   for (int i = 0; i<winners.size(); i++) {
-    cout << winners[i].get_name() << ", ";
+    cout << winners[i].get_name();
+	if (i<winners.size()-1) {
+		cout << ", ";
+	}
   }
   cout << endl;
 

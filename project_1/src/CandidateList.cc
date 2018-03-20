@@ -84,7 +84,10 @@ vector<Candidate> CandidateList::ReturnWinners(int no_seats) {
   // Loop runs for the number of seats
   for (int j = 0; j<no_seats; j++) {
     // Loops through all the candidates currently in the list of candidates
-    // and finds the one with the most votes
+    // and finds the one with the most votes. Does so comparing the candidate stored
+	// in highest and the current candidate in the list and changes the highest to the 
+	// current candidate if the current one has more ballots than the previous set 
+	// highest candidate.
     for (int i=0;i<candidate_list.size();i++) {
       if (candidate_list.at(i).get_num_ballots()>highest.get_num_ballots()) {
         highest=candidate_list.at(i);

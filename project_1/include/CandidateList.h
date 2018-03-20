@@ -31,7 +31,10 @@
  */
 class CandidateList {
 public:
-
+  /**
+  * @brief Constructor for CandidateList
+  *
+  */
   CandidateList();
   /**
   * @brief Adds candidate to the list.
@@ -62,8 +65,16 @@ public:
   * @brief Returns the size of the list
   */
   int ListSize();
-
+  /**
+  * @brief Returns the vector of candidates.
+  *
+  */
   std::vector<Candidate>& get_candidate_list(){return candidate_list;}
+  /**
+  * @brief Sets candidate_list (a vector).
+  *
+  * @param cl Vector to set candidate_list to.
+  */
   void set_candidate_list(std::vector<Candidate> cl) {candidate_list = cl;}
 private:
   std::vector<Candidate> candidate_list;

@@ -8,6 +8,9 @@ SRCDIR = src
 BINDIR = $(BUILDDIR)/bin
 OBJDIR = $(BUILDDIR)/obj/src
 EXEFILE = elect.out
+CXXTEST = ./cxxtest/bin/cxxtestgen --error-printer -o
+CXXCOMPILE = g++ -I./cxxtest -o
+TESTDIR = tests
 
 # The list of files to compile for this project.  Defaults to all
 # of the .cpp and .cc files in the source directory.  (We use both .cpp
@@ -22,7 +25,8 @@ all: $(EXEFILE)
 
 clean:
 	@rm -rf $(BUILDDIR)/obj/src/*.o
-	@rm -rf $(EXEFILE)
+	@rm -rf *.out
+	@rm -rf $(TESTDIR)/*.cpp
 
 $(OBJDIR) $(BINDIR):
 	@mkdir -p $@
@@ -31,12 +35,12 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cc
 	@echo "==== Compiling $< into $@. ===="
 	$(CC) $(CFLAGS) -o  $@ $<
 
-Ballot_tests: tests/Ballot_tests.cpp
-	g++ -I./cxxtest -o Ballot_tests tests/Ballot_tests.cpp build/obj/src/Ballot.o
+# Copy these two commands and change all the "Ballot_tests" to the test filename
+Ballot_tests: $(TESTDIR)/Ballot_tests.cpp
+	$(CXXCOMPILE) Ballot_tests.out $(TESTDIR)/Ballot_tests.cpp $(OBJDIR)/Ballot.o
 
-tests/Ballot_tests.cpp:
-	./cxxtest/bin/cxxtestgen --error-printer -o tests/Ballot_tests.cpp tests/Ballot_tests.h
-
+$(TESTDIR)/Ballot_tests.cpp:
+	$(CXXTEST) $(TESTDIR)/Ballot_tests.cpp $(TESTDIR)/Ballot_tests.h
 
 
 

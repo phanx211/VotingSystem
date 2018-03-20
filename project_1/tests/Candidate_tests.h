@@ -15,6 +15,10 @@ class CandidateTestSuite : public CxxTest::TestSuite {
     }
 
     test_custom_constructor() {
-
+      c = new Candidate("[A]",13);
+      TS_ASSERT(c);
+      TS_ASSERT(c);
+      TS_ASSERT(c.get_name() == "[A]");
+      TS_ASSERT(c.get_num_ballots() == 13);
     }
 }

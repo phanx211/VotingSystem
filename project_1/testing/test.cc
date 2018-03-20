@@ -68,31 +68,11 @@ vector<int> make_ballot(string line) {
 
 int main()
 {
+    vector<int> a;
+    vector<int> b;
+    a.push_back(1);
+    a.push_back(1);
+    cout << b.size() << endl;
 
-	ifstream infile;
-	infile.open("ex.csv");
-	string line;
-	getline(infile,line,'\n');
-	for (int i=0; i<11; i++) {
-		getline(infile,line,'\n');
-		cout << line << endl;
-		vector<int> votes = make_ballot(line);
-		for (int i = 0; i<votes.size(); i++) {
-			cout << votes[i] << ' ';
-		}
-		cout << "\n";
-	}
-	// string line = "1, ,21,3,, ,,,1,";
-	// // for (int i=0; i<line.length(); i++) {
-	// // 	cout << line[i] << endl;
-	// // }
-	// if (line[0] == ' ') {
-	// 	cout << "Success" << endl;
-	// }
-	// vector<int> votes = split_votes(line);
-	// //votes.erase(votes.end()-1);
-	// for (int i = 0; i<votes.size(); i++) {
-	// 	cout << votes[i] << endl;
-	// }
-	return 0;
+    return 0;
 }

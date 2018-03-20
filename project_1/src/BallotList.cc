@@ -78,7 +78,7 @@ void BallotList::MakeBallot(string data) {
 																	// character in the string
 
 	// Start iterating through the data, starting at the 2nd character
-	for (unsigned i = 1; i < data.length()-1; i++) {
+	for (unsigned i = 1; i <= data.length()-1; i++) {
 		char s = data[i];
 		// If the current character is a space, add a 0
 		if (data[i] == ' ') {
@@ -124,10 +124,8 @@ void BallotList::ReadFile(string filename, int num_ballots) {
 	infile.open(filename.c_str());
 	string data;
 	getline(infile,data,'\n');
-	// std::cout << data << '\n';
 	for (int i=0; i<num_ballots; i++) {
 		getline(infile,data,'\n');
-		//cout << data << endl;
 		MakeBallot(data);
 	}
 	infile.close();

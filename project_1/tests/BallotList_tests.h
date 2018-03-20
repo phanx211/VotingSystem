@@ -1,6 +1,7 @@
 #include <cxxtest/TestSuite.h>
 #include <cstdlib>
 #include <algorithm>
+#include <iostream>
 #include "../include/Ballot.h"
 #include "../include/BallotList.h"
 
@@ -11,7 +12,7 @@ class BallotListTestSuite : public CxxTest::TestSuite {
   public:
 
     void test_ShuffleBallots() {
-      BallotList b;
+		BallotList b;
   		vector<int> v;
   		v.push_back(1);
   		v.push_back(2);
@@ -22,15 +23,15 @@ class BallotListTestSuite : public CxxTest::TestSuite {
   		b.AddBallot(b1);
   		b.AddBallot(b2);
   		BallotList c = b;
-      vector<int> original;
-      original.push_back(1);
-      original.push_back(2);
-      original.push_back(3);
+		vector<int> original;
+		original.push_back(1);
+		original.push_back(2);
+		original.push_back(3);
   		c.ShuffleBallots();
-      vector<int> shuffled;
-      shuffled.push_back(b.get_ballot_list()[0].get_ballot_no());
-      shuffled.push_back(b.get_ballot_list()[1].get_ballot_no());
-      shuffled.push_back(b.get_ballot_list()[2].get_ballot_no());
+		vector<int> shuffled;
+		shuffled.push_back(c.get_ballot_list()[0].get_ballot_no());
+		shuffled.push_back(c.get_ballot_list()[1].get_ballot_no());
+		shuffled.push_back(c.get_ballot_list()[2].get_ballot_no());
   		TS_ASSERT(original != shuffled);
     }
 
@@ -83,19 +84,18 @@ class BallotListTestSuite : public CxxTest::TestSuite {
 		TS_ASSERT(b.ListSize() == 3);
     }
 
-    void test_MakeBallot() {
+	void test_MakeBallot() {
 		BallotList b;
 		b.MakeBallot("1,2,3");
 		TS_ASSERT(b.ListSize() == 1);
 		TS_ASSERT(b.get_ballot_list()[0].get_votes()[0] == 1);
 		TS_ASSERT(b.get_ballot_list()[0].get_votes()[1] == 2);
 		TS_ASSERT(b.get_ballot_list()[0].get_votes()[2] == 3);
-
     }
 
-    void test_ReadFile() {
+	void test_ReadFile() {
 		BallotList b;
-		b.ReadFile("test.csv",3);
+		b.ReadFile("tests/test.csv",3);
 		TS_ASSERT(b.ListSize() == 3);
 		TS_ASSERT(b.get_ballot_list()[0].get_votes()[0] == 1);
 		TS_ASSERT(b.get_ballot_list()[0].get_votes()[1] == 0);

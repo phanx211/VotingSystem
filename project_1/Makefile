@@ -42,7 +42,17 @@ Ballot_tests: $(TESTDIR)/Ballot_tests.cpp
 $(TESTDIR)/Ballot_tests.cpp:
 	$(CXXTEST) $(TESTDIR)/Ballot_tests.cpp $(TESTDIR)/Ballot_tests.h
 
+BallotList_tests: $(TESTDIR)/BallotList_tests.cpp
+	$(CXXCOMPILE) BallotList_tests.out $(TESTDIR)/BallotList_tests.cpp $(OBJDIR)/Ballot.o $(OBJDIR)/BallotList.o
 
+$(TESTDIR)/BallotList_tests.cpp:
+	$(CXXTEST) $(TESTDIR)/BallotList_tests.cpp $(TESTDIR)/BallotList_tests.h
+
+Candidate_tests: $(TESTDIR)/Candidate_tests.cpp
+	$(CXXCOMPILE) Candidate_tests.out $(TESTDIR)/Candidate_tests.cpp $(OBJDIR)/Candidate.o
+
+$(TESTDIR)/Candidate_tests.cpp:
+	$(CXXTEST) $(TESTDIR)/Candidate_tests.cpp $(TESTDIR)/Candidate_tests.h
 
 
 $(EXEFILE): $(addprefix $(OBJDIR)/, $(OBJFILES)) | $(BINDIR)

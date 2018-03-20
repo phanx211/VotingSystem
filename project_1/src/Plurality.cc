@@ -40,7 +40,8 @@ void Plurality::Algorithm() {
 
   // The following loop goes through the original list of ballots and distributes
   // the ballots to the respective candidate based on the rankings on the ballot
-  for (int i = 0; i < get_num_ballots(); i++) {
+  int ballots = get_num_ballots();
+  for (int i = 0; i < ballots; i++) {
     // Gets the highest vote index in a given ballot from 'ballots'
     highest_index=ReturnHighestVoteIndex(get_ballots().get_ballot_list()[0]);
 

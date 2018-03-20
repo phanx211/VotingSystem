@@ -34,7 +34,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cc
 Ballot_tests: tests/Ballot_tests.cpp
 	g++ -I./cxxtest -o Ballot_tests tests/Ballot_tests.cpp build/obj/src/Ballot.o
 
-Ballot_tests.cpp:
+tests/Ballot_tests.cpp:
 	./cxxtest/bin/cxxtestgen --error-printer -o tests/Ballot_tests.cpp tests/Ballot_tests.h
 
 

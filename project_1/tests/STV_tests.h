@@ -31,10 +31,22 @@ class STVTestSuite : public CxxTest::TestSuite {
     }
 
     void test_move_candidate() {
-      
+      STV s;
+      CandidateList cL1;
+      CandidateList cL2;
+      Candidate a("A");
+      Candidate b("B");
+      cL1.Add(a);
+      cL1.Add(b);
+      s.MoveCandidate("A",cL1,cL2);
+      TS_ASSERT(cL1.get_candidate_list().ListSize() == 1);
+      TS_ASSERT(cL1.get_candidate_list()[0].get_name() == "B");
+      TS_ASSERT(cL2.get_candidate_list().ListSize() == 1);
+      TS_ASSERT(cL2.get_candidate_list()[0].get_name() == "A");
     }
 
     void test_calculate_droop() {
-
+      STV s(1,4,3);
+      TS_ASSERT(s.CalculateDroop() == 1);
     }
 };

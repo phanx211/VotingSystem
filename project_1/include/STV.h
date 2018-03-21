@@ -46,7 +46,7 @@ public:
   * @brief Returns the index of the highest vote in a ballot
   * @param b Ballot to read through.
   */
-  string ReturnNameOfVote(Ballot b, int n);
+  string ReturnNameOfVote(Ballot b);
   string ReturnNameOfHighest(Ballot b);
 
   /**
@@ -63,6 +63,8 @@ public:
   int get_droop() {return droop;}
 
   void set_droop(int d) {droop = d;}
+
+  int get_index(vector<int> v, int n);
 
 private:
 

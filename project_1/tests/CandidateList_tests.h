@@ -5,8 +5,8 @@
 #include <algorithm>
 #include <string>
 #include <cstdlib>
-#include "../include/Candidate.h"
 #include "../include/CandidateList.h"
+
 
 using namespace std;
 
@@ -15,48 +15,32 @@ class CandidateListTestSuite : public CxxTest::TestSuite {
   public:
     void test_generic_constructor() {
       CandidateList c;
-      std::vector<Candidate> empty;
-      TS_ASSERT(empty == c.get_candidate_list());
+      vector<Candidate> empty;
+      TS_ASSERT(empty.size() == c.get_candidate_list().size());
     }
 
-    void test_add_candidate() {
-      CandidateList cL;
-      Candidate c("A",10);
-      cL.Add(c);
-      TS_ASSERT(c == cL.get_candidate_list()[0]);
-    }
-
-    void test_remove_candidate() {
-      CandidateList cL;
-      Candidate c("A",10);
-      cL.Add(c);
-      Candidate removed = cL.Remove("A");
-      TS_ASSERT(c == removed);
-      TS_ASSERT(cL.get_candidate_list().size() == 0);
-    }
-
-    void test_return_loser() {
+	void test_return_loser() {
       CandidateList c;
-      Candidate a("A",10);
-      Candidate b("B",20);
+      Candidate a("A");
+      Candidate b("B");
       c.Add(a);
       c.Add(b);
-      TS_ASSERT(a == c.ReturnLoser());
+      TS_ASSERT(a.get_name() == c.ReturnLoser().get_name());
     }
 
     void test_return_winner() {
       CandidateList c;
-      Candidate a("A",10);
-      Candidate b("B",20);
+      Candidate a("A");
+      Candidate b("B");
       c.Add(a);
       c.Add(b);
-      TS_ASSERT(b == c.ReturnWinner());
+      TS_ASSERT(b.get_name() == c.ReturnWinner().get_name());
     }
 
     void test_return_winners() {
       CandidateList c;
-      Candidate a("A",10);
-      Candidate b("B",20);
+      Candidate a("A");
+      Candidate b("B");
       c.Add(a);
       c.Add(b);
       vector<Candidate> winners;
@@ -64,4 +48,20 @@ class CandidateListTestSuite : public CxxTest::TestSuite {
       winners.push_back(a);
     }
 
+	void test_remove_candidate() {
+      CandidateList cL;
+      Candidate c("A");
+      cL.Add(c);
+      Candidate removed;
+	  removed = cL.Remove("A");
+      TS_ASSERT(c.get_name() == removed.get_name());
+      TS_ASSERT(cL.get_candidate_list().size() == 0);
+    }
+	
+	void test_add_candidate() {
+      CandidateList cL;
+      Candidate c("A");
+      cL.Add(c);
+      TS_ASSERT(c.get_name() == cL.get_candidate_list()[0].get_name());
+    }
 };

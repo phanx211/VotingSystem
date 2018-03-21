@@ -23,11 +23,11 @@ class STVTestSuite : public CxxTest::TestSuite {
     void test_return_name_of_vote() {
       STV s(1,4,3);
       BallotList init_ballots_;
-      testp.ReadNames("tests/test.csv"); // Initialize the candidate list based on names in the csv
+      s.ReadNames("tests/test.csv");
       init_ballots_.ReadFile("tests/test.csv",3);
-      TS_ASSERT(s.ReturnNameOfVote(s.get_ballots()[0]) == "[A]");
-      TS_ASSERT(s.ReturnNameOfVote(s.get_ballots()[1]) == "[B]");
-      TS_ASSERT(s.ReturnNameOfVote(s.get_ballots()[2]) == "[A]");
+      TS_ASSERT(s.ReturnNameOfVote(s.get_ballots().get_ballot_list()[0]) == "[A]");
+      TS_ASSERT(s.ReturnNameOfVote(s.get_ballots().get_ballot_list()[1]) == "[B]");
+      TS_ASSERT(s.ReturnNameOfVote(s.get_ballots().get_ballot_list()[2]) == "[A]");
     }
 
     void test_move_candidate() {
@@ -39,14 +39,15 @@ class STVTestSuite : public CxxTest::TestSuite {
       cL1.Add(a);
       cL1.Add(b);
       s.MoveCandidate("A",cL1,cL2);
-      TS_ASSERT(cL1.get_candidate_list().ListSize() == 1);
+      TS_ASSERT(cL1.ListSize() == 1);
       TS_ASSERT(cL1.get_candidate_list()[0].get_name() == "B");
-      TS_ASSERT(cL2.get_candidate_list().ListSize() == 1);
+      TS_ASSERT(cL2.ListSize() == 1);
       TS_ASSERT(cL2.get_candidate_list()[0].get_name() == "A");
     }
 
     void test_calculate_droop() {
       STV s(1,4,3);
-      TS_ASSERT(s.CalculateDroop() == 1);
+      s.CalculateDroop();
+      TS_ASSERT(s.get_droop() == 2);
     }
 };

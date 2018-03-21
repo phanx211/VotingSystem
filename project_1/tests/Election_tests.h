@@ -45,6 +45,6 @@ class ElectionTestSuite : public CxxTest::TestSuite {
       TS_ASSERT(e.get_candidates().get_candidate_list()[0].get_name() == "[A]");
       TS_ASSERT(e.get_candidates().get_candidate_list()[1].get_name() == "[B]");
       TS_ASSERT(e.get_candidates().get_candidate_list()[2].get_name() == "[C]");
-      TS_ASSERT(e.get_candidates().get_candidate_list()[3].get_name() == "[D]");
+      TS_ASSERT(e.get_candidates().get_candidate_list()[3].get_name() == "[D]\r");
     }
 };

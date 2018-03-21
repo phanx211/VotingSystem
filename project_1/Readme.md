@@ -13,3 +13,9 @@ Then, you can simply type the following in a Terminal:
 make all
 ```
 This will create all files which include an executable file **elect.out** and all the test files.
+
+To launch the Voting System, type in:
+```
+./elect.output
+```
+You will then be prompted to type in the number of candidates in the election, the number of seats, ballots, the voting type to run the election on and the name of the CSV file that contains all the ballots.

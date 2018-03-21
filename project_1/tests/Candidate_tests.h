@@ -17,7 +17,7 @@ class CandidateTestSuite : public CxxTest::TestSuite {
     void test_custom_constructor() {
 	  Candidate c("[A]");
       TS_ASSERT(c.get_name() == "[A]");
-	  cout << endl;
-	  cout << c.get_num_ballots() << endl;
+	  TS_ASSERT(c.get_num_ballots() == 0);
+	  TS_ASSERT(c.get_votes().ListSize() == 0);
     }
 };

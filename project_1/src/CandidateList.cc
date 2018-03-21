@@ -28,7 +28,7 @@ void CandidateList::Add(Candidate c) {
 // Removes a candidate from the vector by their name and returns that candidate
 Candidate CandidateList::Remove(std::string name) {
 	Candidate temp;
-	for (int i = 0; i<candidate_list.size();i++ ) {
+	for (unsigned i = 0; i<candidate_list.size();i++ ) {
 		if (candidate_list.at(i).get_name() == name) {
 			temp = candidate_list.at(i);
 			candidate_list.erase(candidate_list.begin()+i);
@@ -38,10 +38,23 @@ Candidate CandidateList::Remove(std::string name) {
 	return temp;
 }
 
+bool CandidateList::ThereExists(string s) {
+  if (ListSize()==0) {
+    return false;
+  }
+  for (unsigned i = 0; i<candidate_list.size();i++) {
+    // std::cout << candidate_list.at(i).get_name() << '\n';
+    if (candidate_list.at(i).get_name()==s) {
+      return true;
+    }
+  }
+  return false;
+}
+
 // Returns a single candidate with the lowest amount of votes
-Candidate CandidateList::ReturnLoser() {
+Candidate& CandidateList::ReturnLoser() {
   Candidate lowest=candidate_list.front();
-  for (int i = 0; i<candidate_list.size();i++) {
+  for (unsigned i = 0; i<candidate_list.size();i++) {
     if (candidate_list.at(i).get_num_ballots()<lowest.get_num_ballots()) {
       lowest=candidate_list.at(i);
     }
@@ -51,13 +64,24 @@ Candidate CandidateList::ReturnLoser() {
       }
     }
   }
-  return lowest;
+
+  return ReturnCandidate(lowest.get_name());
+}
+
+Candidate& CandidateList::ReturnCandidate(string s) {
+  Candidate temp("Something went wrong");
+  for (unsigned i = 0; i<candidate_list.size();i++) {
+    if (candidate_list.at(i).get_name()==s) {
+      return candidate_list.at(i);
+    }
+  }
+  return temp;
 }
 
 // Returns a single candidate with the most votes
 Candidate CandidateList::ReturnWinner() {
   Candidate highest=candidate_list[0];
-  for (int i=0;i<candidate_list.size();i++) {
+  for (unsigned i=0;i<candidate_list.size();i++) {
     if (candidate_list.at(i).get_num_ballots()>highest.get_num_ballots()) {
       highest=candidate_list.at(i);
     }
@@ -85,10 +109,10 @@ vector<Candidate> CandidateList::ReturnWinners(int no_seats) {
   for (int j = 0; j<no_seats; j++) {
     // Loops through all the candidates currently in the list of candidates
     // and finds the one with the most votes. Does so comparing the candidate stored
-	// in highest and the current candidate in the list and changes the highest to the 
-	// current candidate if the current one has more ballots than the previous set 
+	// in highest and the current candidate in the list and changes the highest to the
+	// current candidate if the current one has more ballots than the previous set
 	// highest candidate.
-    for (int i=0;i<candidate_list.size();i++) {
+    for (unsigned i=0;i<candidate_list.size();i++) {
       if (candidate_list.at(i).get_num_ballots()>highest.get_num_ballots()) {
         highest=candidate_list.at(i);
       }

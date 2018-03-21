@@ -19,7 +19,7 @@ Plurality::Plurality() : Election() {}
 Plurality::Plurality(int num_seats, int num_candidates, int num_ballots) : Election(num_seats, num_candidates, num_ballots) {}
 
 int Plurality::ReturnHighestVoteIndex(Ballot b) {
-  int min=b.get_votes()[0];
+  int min=999;
   int min_index=0;
 
   // Technically we can just look for 1 but This might be useful for STV
@@ -52,7 +52,7 @@ void Plurality::Algorithm() {
     MoveBallot(bal_no, get_ballots(), get_candidates().get_candidate_list()[highest_index].get_votes());
   }
 
-  for (int i = 0; i < get_candidates().get_candidate_list().size(); i++) {
+  for (unsigned i = 0; i < get_candidates().get_candidate_list().size(); i++) {
     cout << "Candidate: " << i << " Votes: " << get_candidates().get_candidate_list()[i].get_votes().ListSize() << endl;
   }
 
@@ -65,11 +65,11 @@ void Plurality::Algorithm() {
   else {
   	  cout << "THE WINNER IS: ";
   }
-  for (int i = 0; i<winners.size(); i++) {
+  for (unsigned i = 0; i<winners.size(); i++) {
     cout << winners[i].get_name();
-	if (i<winners.size()-1) {
-		cout << ", ";
-	}
+  	if (i<winners.size()-1) {
+  		cout << ", ";
+  	}
   }
   cout << endl;
 

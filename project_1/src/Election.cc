@@ -37,7 +37,7 @@ void Election::MoveBallot(int bal_no, BallotList& src, BallotList& dst) {
 }
 
 // Reads through the first line of the csv (the name of the candidates) and adds
-// each candidate to the list by their name. 
+// each candidate to the list by their name.
 void Election::ReadNames(string filename) {
 	ifstream infile;
 	infile.open(filename.c_str());
@@ -47,6 +47,7 @@ void Election::ReadNames(string filename) {
 	string token;
 
 	while(std::getline(ss, token, ',')) {
+			names.push_back(token);
 		  Candidate temp(token);
 	    candidates.Add(temp);
 	}

@@ -29,6 +29,8 @@
  * add, and remove the Ballots from this array
  *    - It also has a function that will return the Candidate who has the lowest Ballots.
  */
+using namespace std;
+
 class CandidateList {
 public:
   /**
@@ -51,7 +53,7 @@ public:
   /**
   * @brief Returns the candidate with the lowest votes.
   */
-  Candidate ReturnLoser();
+  Candidate& ReturnLoser();
   /**
   * @brief Returns the candidate with the highest votes.
   */
@@ -76,6 +78,11 @@ public:
   * @param cl Vector to set candidate_list to.
   */
   void set_candidate_list(std::vector<Candidate> cl) {candidate_list = cl;}
+
+  Candidate& ReturnCandidate(string s);
+
+  bool ThereExists(string s);
+
 private:
   std::vector<Candidate> candidate_list;
 };

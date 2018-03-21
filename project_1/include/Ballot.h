@@ -37,7 +37,7 @@ class Ballot {
 		*
 		* @param vote Stores a single instance of the ballot number votes.
 		*/
-		Ballot(int num, std::vector<int> vote);
+		Ballot(int num, std::vector<int> vote, int p);
 
 		//Getters/Setters
 
@@ -45,6 +45,12 @@ class Ballot {
 		* @brief Gets the ballot number from the class
 		*/
 		int get_ballot_no() {return ballot_no;}
+
+		int get_preferences() {return preferences;}
+
+		int get_current() {return current;}
+
+		void set_current(int c) {current = c;}
 
 		/**
 		* @brief Sets the ballot number (b_no) to the local variable (ballot_no) to store the ballot number
@@ -65,6 +71,8 @@ class Ballot {
 	private:
 		int ballot_no;
 		std::vector<int> votes;
+		int preferences;
+		int current;
 };
 
 #endif  // PROJECT_INCLUDE_BALLOT_H_

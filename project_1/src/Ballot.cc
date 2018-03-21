@@ -17,8 +17,10 @@ Ballot::Ballot() {
 
 // Constructor to create a ballot object with ballot number and a vector
 // representing the votes
-Ballot::Ballot(int num, std::vector<int> vote) {
+Ballot::Ballot(int num, std::vector<int> vote, int p) {
 	this->ballot_no = num;
 	this->votes = vote;
+	this->preferences = p;
+	this->current = 1;
 
 }

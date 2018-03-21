@@ -43,6 +43,13 @@ public:
   // std::vector<int> get_vote_count() {return vote_count};
 
   /**
+  * @brief Returns the index of the highest vote in a ballot
+  * @param b Ballot to read through.
+  */
+  string ReturnNameOfVote(Ballot b, int n);
+  string ReturnNameOfHighest(Ballot b);
+
+  /**
   * @brief Main driver of the STV voting
   */
   void Algorithm();
@@ -50,6 +57,8 @@ public:
   * @brief Calculates the Droop number for STV.
   */
   void CalculateDroop();
+
+  void MoveCandidate(string can_name, CandidateList& src, CandidateList& dst);
 
   int get_droop() {return droop;}
 

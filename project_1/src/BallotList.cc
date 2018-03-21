@@ -32,15 +32,14 @@ BallotList::BallotList(std::vector<Ballot> ballots, int num) {
 
 // Shuffles the order of ballot_list
 void BallotList::ShuffleBallots() {
-  std::random_shuffle ( ballot_list.begin(), ballot_list.end() );
+  std::random_shuffle ( ballot_list.begin(), ballot_list.end());
 }
 
 
 // Removes a ballot object from ballot_list and returns it
 Ballot BallotList::RemoveBallot(int ballot_no) {
-	int i=0;
 	Ballot temp;
-	for (int i=0;i<ballot_list.size();i++) {
+	for (unsigned i=0;i<ballot_list.size();i++) {
 		if (ballot_list.at(i).get_ballot_no() == ballot_no) {
 			temp = ballot_list.at(i);
 			ballot_list.erase(ballot_list.begin()+i);
@@ -78,7 +77,7 @@ void BallotList::MakeBallot(string data) {
 																	// character in the string
 
 	// Start iterating through the data, starting at the 2nd character
-	for (unsigned i = 1; i <= data.length()-1; i++) {
+	for (unsigned i = 1; i < data.length()-1; i++) {
 		char s = data[i];
 		// If the current character is a space, add a 0
 		if (data[i] == ' ') {
@@ -112,12 +111,19 @@ void BallotList::MakeBallot(string data) {
 	if ((data[data.length()-1] == ',') || (data[data.length()-2] == ' ') || (data[data.length()-2] == ',')) {
 		votes.push_back(0);
 	}
+	int max=0;
+	for (unsigned i=0; i<votes.size();i++) {
+		if (votes[i]>max) {
+			max=votes[i];
+		}
+	}
 
-	Ballot new_ballot(ListSize()+1,votes);
+
+	Ballot new_ballot(ListSize()+1,votes,max);
 	this->AddBallot(new_ballot);
 }
 
-// Reads through the csv file containing the ballots and runs MakeBallot on 
+// Reads through the csv file containing the ballots and runs MakeBallot on
 // each line that is a ballot
 void BallotList::ReadFile(string filename, int num_ballots) {
 	ifstream infile;

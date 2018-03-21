@@ -86,7 +86,7 @@ class Election {
 		void set_num_ballots(int b) {num_ballots = b;}
 
 		/**
-		* ASK RONNY
+		* @brief Returns the list of candidates in election
 		*/
 		CandidateList& get_candidates() {return candidates;}
 
@@ -97,15 +97,17 @@ class Election {
 		*/
 		void set_votes(CandidateList cs) {candidates = cs;}
 
+		vector<string> get_names() {return names;}
+
 		/**
-		* ASK RONNY
+		* @brief Returns the list of ballots in the election
 		*/
 		BallotList& get_ballots() {return ballots;}
 
 		/**
 		* @brief sets the ballots to equal to the ballots obtained from the BallotList (bs)
 		*
-		* @param bs Variable to get the ballots from the BallotList
+		* @param bs Variable to get the ballots fro m the BallotList
 		*/
 		void set_ballots(BallotList bs) {ballots = bs;}
 
@@ -132,15 +134,20 @@ class Election {
 		void MoveBallot(int bal_no, BallotList& src, BallotList& dst);
 
 		/**
-		* @brief RONNY !!! Reads the names from the filename 
+		* @brief Reads the csv file to initialize the candidates
 		*/
 		void ReadNames(string filename);
+
+		CandidateList& get_elected() {return elected;}
+
+		CandidateList& get_non_elected() {return non_elected;}
 
 	private:
 		int num_seats;
 		int num_candidates;
 		int num_ballots;
 		CandidateList candidates;
+		vector<string> names;
 		CandidateList elected;
 		CandidateList non_elected;
 		BallotList ballots;

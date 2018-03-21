@@ -22,15 +22,15 @@
  /*******************************************************************************
   * Class Definitions
   ******************************************************************************/
+
+using namespace std;
 /**
  * @brief An object containing a list of candidates
  *    - The CandidaeList class will be the main structure in which Ballots are stored.
  *    - The CandidateList stores an array of Candidate classes. It then has options to
- * add, and remove the Ballots from this array
+ *    add, and remove the Ballots from this array
  *    - It also has a function that will return the Candidate who has the lowest Ballots.
  */
-using namespace std;
-
 class CandidateList {
 public:
   /**

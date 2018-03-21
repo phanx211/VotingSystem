@@ -26,10 +26,18 @@ all: $(EXEFILE)
 	make BallotList_tests
 	make Candidate_tests
 	make CandidateList_tests
+	make Election_tests
+	make Plurality_tests
+	make STV_tests
+
+run-tests: Ballot_tests BallotList_tests Candidate_tests CandidateList_tests Election_tests Plurality_tests STV_tests
 	./Ballot_tests.out
 	./BallotList_tests.out
 	./Candidate_tests.out
 	./CandidateList_tests.out
+	./Election_tests.out
+	./Plurality_tests.out
+	./STV_tests.out
 
 clean:
 	@rm -rf $(BUILDDIR)/obj/src/*.o
@@ -68,6 +76,23 @@ CandidateList_tests: $(TESTDIR)/CandidateList_tests.cpp
 $(TESTDIR)/CandidateList_tests.cpp:
 	$(CXXTEST) $(TESTDIR)/CandidateList_tests.cpp $(TESTDIR)/CandidateList_tests.h
 
+Election_tests: $(TESTDIR)/Election_tests.cpp
+	$(CXXCOMPILE) Election_tests.out $(TESTDIR)/Election_tests.cpp $(OBJDIR)/Candidate.o $(OBJDIR)/CandidateList.o $(OBJDIR)/BallotList.o $(OBJDIR)/Ballot.o $(OBJDIR)/Election.o
+
+$(TESTDIR)/Election_tests.cpp:
+	$(CXXTEST) $(TESTDIR)/Election_tests.cpp $(TESTDIR)/Election_tests.h
+
+Plurality_tests: $(TESTDIR)/Plurality_tests.cpp
+	$(CXXCOMPILE) Plurality_tests.out $(TESTDIR)/Plurality_tests.cpp $(OBJDIR)/Candidate.o $(OBJDIR)/CandidateList.o $(OBJDIR)/BallotList.o $(OBJDIR)/Ballot.o $(OBJDIR)/Election.o $(OBJDIR)/Plurality.o
+
+$(TESTDIR)/Plurality_tests.cpp:
+	$(CXXTEST) $(TESTDIR)/Plurality_tests.cpp $(TESTDIR)/Plurality_tests.h
+
+STV_tests: $(TESTDIR)/STV_tests.cpp
+	$(CXXCOMPILE) STV_tests.out $(TESTDIR)/STV_tests.cpp $(OBJDIR)/Candidate.o $(OBJDIR)/CandidateList.o $(OBJDIR)/BallotList.o $(OBJDIR)/Ballot.o $(OBJDIR)/Election.o $(OBJDIR)/STV.o
+
+$(TESTDIR)/STV_tests.cpp:
+	$(CXXTEST) $(TESTDIR)/STV_tests.cpp $(TESTDIR)/STV_tests.h
 
 $(EXEFILE): $(addprefix $(OBJDIR)/, $(OBJFILES)) | $(BINDIR)
 	$(CXX) $(LDFLAGS) $(addprefix $(OBJDIR)/, $(OBJFILES)) -o $@

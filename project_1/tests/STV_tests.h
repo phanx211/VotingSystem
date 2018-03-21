@@ -25,6 +25,7 @@ class STVTestSuite : public CxxTest::TestSuite {
       BallotList init_ballots_;
       s.ReadNames("tests/test.csv");
       init_ballots_.ReadFile("tests/test.csv",3);
+      s.set_ballots(init_ballots_);
       TS_ASSERT(s.ReturnNameOfVote(s.get_ballots().get_ballot_list()[0]) == "[A]");
       TS_ASSERT(s.ReturnNameOfVote(s.get_ballots().get_ballot_list()[1]) == "[B]");
       TS_ASSERT(s.ReturnNameOfVote(s.get_ballots().get_ballot_list()[2]) == "[A]");

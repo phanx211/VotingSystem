@@ -1,4 +1,4 @@
-##Team 13 Voting System Project
+## Team 13 Voting System Project
 
 This repo contains the Voting System Project done by Team 13.
 
@@ -21,6 +21,9 @@ To launch the Voting System, type in:
 You will then be prompted to type in the number of candidates in the election, the number of seats, ballots, the voting type to run the election on and the name of the CSV file that contains all the ballots.
 
 The algorithm will then run through the respective voting algorithm and display all the results in **log.txt** inside the project file.
+
+**NOTE:**
+The number of winners may not be the same of the number of seats if Droop is too high and candidates never reach it. This is documented more in the bug report.
 
 ### Running Unit Tests
 

@@ -86,7 +86,7 @@ class BallotListTestSuite : public CxxTest::TestSuite {
 
 	void test_MakeBallot() {
 		BallotList b;
-		b.MakeBallot("1,2,3");
+		b.MakeBallot("1,2,3\r");
 		TS_ASSERT(b.ListSize() == 1);
 		TS_ASSERT(b.get_ballot_list()[0].get_votes()[0] == 1);
 		TS_ASSERT(b.get_ballot_list()[0].get_votes()[1] == 2);

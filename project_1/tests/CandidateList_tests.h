@@ -28,7 +28,14 @@ class CandidateListTestSuite : public CxxTest::TestSuite {
       TS_ASSERT(c.get_name() == removed.get_name());
       TS_ASSERT(cL.get_candidate_list().size() == 0);
     }
-	
+
+  void test_there_exists() {
+    CandidateList cL;
+    Candidate c("A");
+    cL.Add(c);
+    TS_ASSERT(cL.ThereExists("A") == true);
+  }
+
 	void test_add_candidate() {
       CandidateList cL;
       Candidate c("A");
@@ -48,6 +55,13 @@ class CandidateListTestSuite : public CxxTest::TestSuite {
       c.Add(a);
       c.Add(b);
       TS_ASSERT(a.get_name() == c.ReturnLoser().get_name());
+    }
+
+    void test_return_candidate(){
+      CandidateList cL;
+      Candidate c("A");
+      cL.Add(c);
+      TS_ASSERT(cL.ReturnCandidate("A").get_name() == c.get_name());
     }
 
     void test_return_winner() {
@@ -70,5 +84,14 @@ class CandidateListTestSuite : public CxxTest::TestSuite {
       vector<Candidate> winners;
       winners.push_back(b);
       winners.push_back(a);
+    }
+
+    void test_list_size() {
+      CandidateList c;
+      Candidate a("A");
+      Candidate b("B");
+      c.Add(a);
+      c.Add(b);
+      TS_ASSERT(c.ListSize() == 2);
     }
 };

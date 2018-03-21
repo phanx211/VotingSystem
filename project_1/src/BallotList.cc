@@ -119,7 +119,7 @@ void BallotList::MakeBallot(string data) {
 	}
 
 
-	Ballot new_ballot(ListSize()+1,votes,max);
+	Ballot new_ballot(ListSize()+1,votes);
 	this->AddBallot(new_ballot);
 }
 

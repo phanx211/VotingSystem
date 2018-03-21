@@ -37,7 +37,7 @@ class Ballot {
 		*
 		* @param vote Stores a single instance of the ballot number votes.
 		*/
-		Ballot(int num, std::vector<int> vote, int p);
+		Ballot(int num, std::vector<int> vote);
 
 		//Getters/Setters
 
@@ -46,7 +46,7 @@ class Ballot {
 		*/
 		int get_ballot_no() {return ballot_no;}
 
-		int get_preferences() {return preferences;}
+		// int get_preferences() {return preferences;}
 
 		int get_current() {return current;}
 
@@ -71,7 +71,7 @@ class Ballot {
 	private:
 		int ballot_no;
 		std::vector<int> votes;
-		int preferences;
+		// int preferences;
 		int current;
 };
 

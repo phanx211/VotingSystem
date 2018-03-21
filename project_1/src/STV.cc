@@ -23,9 +23,9 @@ STV::STV(int num_seats, int num_candidates, int num_ballots) : Election(num_seat
 string STV::ReturnNameOfVote(Ballot b, int n) {
 
   // This happens when a voter has no more preference
-  if (n>b.get_preferences()) {
-    return "DELETE";
-  }
+  // if (n>b.get_preferences()) {
+  //   return "DELETE";
+  // }
 
   // Technically we can just look for 1 but This might be useful for STV
   // Finds the index where the higehest vote exists

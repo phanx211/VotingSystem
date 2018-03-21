@@ -41,7 +41,10 @@ class CandidateListTestSuite : public CxxTest::TestSuite {
       Candidate a("A");
       Candidate b("B");
 	  Ballot ballot;
+	  Ballot ballot2;
+	  a.get_votes().get_ballot_list().push_back(ballot);
 	  b.get_votes().get_ballot_list().push_back(ballot);
+	  b.get_votes().get_ballot_list().push_back(ballot2);
       c.Add(a);
       c.Add(b);
       TS_ASSERT(a.get_name() == c.ReturnLoser().get_name());

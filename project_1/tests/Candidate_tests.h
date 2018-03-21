@@ -15,9 +15,9 @@ class CandidateTestSuite : public CxxTest::TestSuite {
     }
 
     void test_custom_constructor() {
-	  Candidate c("[A]");
+  	  Candidate c("[A]");
       TS_ASSERT(c.get_name() == "[A]");
-	  TS_ASSERT(c.get_num_ballots() == 0);
-	  TS_ASSERT(c.get_votes().ListSize() == 0);
+  	  TS_ASSERT(c.get_num_ballots() == 0);
+  	  TS_ASSERT(c.get_votes().ListSize() == 0);
     }
 };

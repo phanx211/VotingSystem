@@ -13,7 +13,6 @@
 // Default constructor
 Candidate::Candidate() {
 	name = "";
-	num_ballots = 0;
 	BallotList votes;
 }
 

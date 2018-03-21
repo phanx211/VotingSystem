@@ -9,7 +9,6 @@ class BallotTestSuite : public CxxTest::TestSuite {
 
     void test_generic_constructor() {
       Ballot b;
-      //TS_ASSERT(b);
       TS_ASSERT(b.get_ballot_no() == 0);
     }
 
@@ -18,7 +17,6 @@ class BallotTestSuite : public CxxTest::TestSuite {
       v.push_back(1);
       v.push_back(2);
       Ballot b(1,v);
-
       TS_ASSERT(b.get_ballot_no() == 1);
       TS_ASSERT(b.get_votes()[0] == 1 && b.get_votes()[1] == 2);
     }

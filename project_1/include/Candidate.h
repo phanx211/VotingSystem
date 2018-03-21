@@ -18,7 +18,7 @@ class Candidate {
 	public:
 		//Constructors
 		Candidate();
-		Candidate(std::string name, int num_ballots);
+		Candidate(std::string name, int ballots);
 
 		// Getters/Setters
 		std::string get_name() {return name;}

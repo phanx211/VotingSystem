@@ -22,6 +22,12 @@ SRCFILES = $(wildcard $(SRCDIR)/*.cc)
 OBJFILES = $(notdir $(patsubst %.cc,%.o,$(SRCFILES)))
 
 all: $(EXEFILE)
+	make Ballot_tests
+	make BallotList_tests
+	make Candidate_tests
+	./Ballot_tests.out
+	./BallotList_tests.out
+	./Candidate_tests.out
 
 clean:
 	@rm -rf $(BUILDDIR)/obj/src/*.o
@@ -49,10 +55,16 @@ $(TESTDIR)/BallotList_tests.cpp:
 	$(CXXTEST) $(TESTDIR)/BallotList_tests.cpp $(TESTDIR)/BallotList_tests.h
 
 Candidate_tests: $(TESTDIR)/Candidate_tests.cpp
-	$(CXXCOMPILE) Candidate_tests.out $(TESTDIR)/Candidate_tests.cpp $(OBJDIR)/Candidate.o
+	$(CXXCOMPILE) Candidate_tests.out $(TESTDIR)/Candidate_tests.cpp $(OBJDIR)/Candidate.o $(OBJDIR)/BallotList.o $(OBJDIR)/Ballot.o
 
 $(TESTDIR)/Candidate_tests.cpp:
 	$(CXXTEST) $(TESTDIR)/Candidate_tests.cpp $(TESTDIR)/Candidate_tests.h
+
+CandidateList_tests: $(TESTDIR)/CandidateList_tests.cpp
+	$(CXXCOMPILE) CandidateList_tests.out $(TESTDIR)/CandidateList_tests.cpp $(OBJDIR)/Candidate.o $(OBJDIR)/CandidateList.o $(OBJDIR)/BallotList.o $(OBJDIR)/Ballot.o
+
+$(TESTDIR)/CandidateList_tests.cpp:
+	$(CXXTEST) $(TESTDIR)/CandidateList_tests.cpp $(TESTDIR)/CandidateList_tests.h
 
 
 $(EXEFILE): $(addprefix $(OBJDIR)/, $(OBJFILES)) | $(BINDIR)

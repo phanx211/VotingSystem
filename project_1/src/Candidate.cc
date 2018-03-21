@@ -18,9 +18,7 @@ Candidate::Candidate() {
 }
 
 // Constructor that takes in the candidates name and number of ballots (number of votes)
-Candidate::Candidate(std::string name, int ballots) {
+Candidate::Candidate(std::string name) {
 	this->name = name;
-	this->num_ballots = ballots;
-	// this->votes = votes;
 	BallotList votes;
 }

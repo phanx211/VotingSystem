@@ -47,7 +47,7 @@ void Election::ReadNames(string filename) {
 	string token;
 
 	while(std::getline(ss, token, ',')) {
-		  Candidate temp(token, 0);
+		  Candidate temp(token);
 	    candidates.Add(temp);
 	}
 

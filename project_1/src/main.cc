@@ -27,12 +27,16 @@ int main(int argc, char *argv[]) {
     testp.ReadNames(filename); // Initialize the candidate list based on names in the csv
     init_ballots_.ReadFile(filename,atoi(argv[3])); // Initializes the list of ballots
   												// reading the lines of the csv
-    for (int i = 0; i < init_ballots_.ListSize(); i++) {
-      for (unsigned j = 0; j < init_ballots_.get_ballot_list()[i].get_votes().size(); j++ ) {
-        cout << init_ballots_.get_ballot_list()[i].get_votes()[j] << " ";
-      }
-      cout << endl;
-    }
+
+// The following commented section can be uncommented to see the integer
+// representation of the votes.
+    // for (int i = 0; i < init_ballots_.ListSize(); i++) {
+    //   for (unsigned j = 0; j < init_ballots_.get_ballot_list()[i].get_votes().size(); j++ ) {
+    //     cout << init_ballots_.get_ballot_list()[i].get_votes()[j] << " ";
+    //   }
+    //   cout << endl;
+    // }
+
   // Sets the ballot_list in the Election class to init_ballots_
     testp.set_ballots(init_ballots_);
 

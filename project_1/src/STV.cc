@@ -112,11 +112,12 @@ void STV::Algorithm() {
 
   // While seats are not filled
   while (get_elected().ListSize()!=get_num_seats()) {
+    if (get_candidates().ListSize() == 0) {
+      break;
+    }
     std::cout << "Round "<< rnd << '\n';
     // std::cout << "Ballot size is " << '\n';
     for (unsigned i = 0; i < itr; i++) {
-      std::cout << "iteration of " << rnd << '\n';
-
       // Gets the highest preference
       highest_name=ReturnNameOfVote(get_ballots().get_ballot_list()[0]);
       if (highest_name == "DELETE") {
@@ -136,8 +137,7 @@ void STV::Algorithm() {
 
         // CHECK IF REACHES DROOP
         if (receiver.get_votes().ListSize()==droop) {
-          std::cout << "Droop is " << receiver.get_name() << '\n';
-          std::cout << "REACHED DROOP!!" << '\n';
+          std::cout << receiver.get_name() << " reached Droop!!!" << '\n';
           MoveCandidate(highest_name, get_candidates(),get_elected());
         }
       }
@@ -152,19 +152,20 @@ void STV::Algorithm() {
 
     }
 
-    // HANDLING OF LOSER
-    string losername=get_candidates().ReturnLoser().get_name();
-    std::cout << "LOSER IS "<<losername;
-    std::cout << " with size " << get_candidates().ReturnLoser().get_votes().ListSize() <<'\n';
+    // HANDLING OF LOSER IF THERE IS ONE
+    if (get_candidates().ListSize() > 0) {
+      string losername=get_candidates().ReturnLoser().get_name();
+      std::cout << "LOSER IS "<<losername;
+      std::cout << " with size " << get_candidates().ReturnLoser().get_votes().ListSize() <<'\n';
 
-    // Move ballots from loser pile, back to STV ballot pile
-    int LoserSize=get_candidates().ReturnLoser().get_votes().ListSize();
-    for (unsigned i = 0; i < LoserSize; i++) {
-      MoveBallot(get_candidates().ReturnLoser().get_votes().get_ballot_list()[0].get_ballot_no(), get_candidates().ReturnLoser().get_votes(), get_ballots());
+      // Move ballots from loser pile, back to STV ballot pile
+      int LoserSize=get_candidates().ReturnLoser().get_votes().ListSize();
+      for (unsigned i = 0; i < LoserSize; i++) {
+        MoveBallot(get_candidates().ReturnLoser().get_votes().get_ballot_list()[0].get_ballot_no(), get_candidates().ReturnLoser().get_votes(), get_ballots());
+      }
+
+      MoveCandidate(losername, get_candidates(),get_non_elected());
     }
-
-    MoveCandidate(losername, get_candidates(),get_non_elected());
-
     itr=get_ballots().ListSize();
 
 
@@ -198,6 +199,7 @@ void STV::Algorithm() {
   // std::cout << "TRUE WINNER IS " << get_elected().get_candidate_list()[0].get_name();
   // std::cout << " WITH " <<  get_elected().get_candidate_list()[0].get_votes().ListSize() << " VOTES" <<'\n';
   // vector<Candidate> winners = get_candidates().ReturnWinners(get_num_seats());
+  cout << "Droop: " << droop << endl;
   if (get_num_seats() > 1) {
 	cout << "THE WINNERS ARE: ";
   }

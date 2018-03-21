@@ -50,7 +50,6 @@ void Election::ReadNames(string filename) {
 	while(std::getline(ss, token, ',')) {
 			Candidate temp;
 			if (count==num_candidates){
-				std::cout << "R is at "<<  token.find('\r') << '\n';
 				names.push_back(token.substr(0,token.find('\r')));
 				temp.set_name(token.substr(0,token.find('\r')));
 			}
@@ -61,8 +60,6 @@ void Election::ReadNames(string filename) {
 	    candidates.Add(temp);
 			count++;
 	}
-
-	std::cout << "Candidate size is " << candidates.ListSize() << '\n';
 
 	infile.close();
 }

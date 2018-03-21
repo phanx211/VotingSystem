@@ -25,9 +25,11 @@ all: $(EXEFILE)
 	make Ballot_tests
 	make BallotList_tests
 	make Candidate_tests
+	make CandidateList_tests
 	./Ballot_tests.out
 	./BallotList_tests.out
 	./Candidate_tests.out
+	./CandidateList_tests.out
 
 clean:
 	@rm -rf $(BUILDDIR)/obj/src/*.o

@@ -19,35 +19,6 @@ class CandidateListTestSuite : public CxxTest::TestSuite {
       TS_ASSERT(empty.size() == c.get_candidate_list().size());
     }
 
-	void test_return_loser() {
-      CandidateList c;
-      Candidate a("A");
-      Candidate b("B");
-      c.Add(a);
-      c.Add(b);
-      TS_ASSERT(a.get_name() == c.ReturnLoser().get_name());
-    }
-
-    void test_return_winner() {
-      CandidateList c;
-      Candidate a("A");
-      Candidate b("B");
-      c.Add(a);
-      c.Add(b);
-      TS_ASSERT(b.get_name() == c.ReturnWinner().get_name());
-    }
-
-    void test_return_winners() {
-      CandidateList c;
-      Candidate a("A");
-      Candidate b("B");
-      c.Add(a);
-      c.Add(b);
-      vector<Candidate> winners;
-      winners.push_back(b);
-      winners.push_back(a);
-    }
-
 	void test_remove_candidate() {
       CandidateList cL;
       Candidate c("A");
@@ -63,5 +34,38 @@ class CandidateListTestSuite : public CxxTest::TestSuite {
       Candidate c("A");
       cL.Add(c);
       TS_ASSERT(c.get_name() == cL.get_candidate_list()[0].get_name());
+    }
+
+	void test_return_loser() {
+      CandidateList c;
+      Candidate a("A");
+      Candidate b("B");
+	  Ballot ballot;
+	  b.get_votes().get_ballot_list().push_back(ballot);
+      c.Add(a);
+      c.Add(b);
+      TS_ASSERT(a.get_name() == c.ReturnLoser().get_name());
+    }
+
+    void test_return_winner() {
+      CandidateList c;
+      Candidate a("A");
+      Candidate b("B");
+	  Ballot ballot;
+	  b.get_votes().get_ballot_list().push_back(ballot);
+      c.Add(a);
+      c.Add(b);
+      TS_ASSERT(b.get_name() == c.ReturnWinner().get_name());
+    }
+
+    void test_return_winners() {
+      CandidateList c;
+      Candidate a("A");
+      Candidate b("B");
+      c.Add(a);
+      c.Add(b);
+      vector<Candidate> winners;
+      winners.push_back(b);
+      winners.push_back(a);
     }
 };

@@ -74,11 +74,15 @@ void STV::MoveCandidate(string can_name, CandidateList& src,
 void STV::CalculateDroop() {
   droop = floor(get_num_ballots() / (get_num_seats() + 1)) + 1;
 }
+
 void STV::Algorithm() {
   int rnd = 1;
   int bal_no;
   string highest_name;
   int itr = get_num_ballots();
+
+  // Shuffle ballots before running election
+  get_ballots().ShuffleBallots();
 
   // While seats are not filled
   while (get_elected().ListSize() != get_num_seats()) {

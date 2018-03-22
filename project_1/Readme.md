@@ -28,6 +28,14 @@ The algorithm will then run through the respective voting algorithm and display 
 **NOTE:**
 The number of winners may not be the same of the number of seats if Droop is too high and candidates never reach it. This is documented more in the bug report.
 
+## Shuffling of Ballots
+
+STV works by first shuffling the initial ballots. To turn this off, simply comment out
+```
+get_ballots().ShuffleBallots();
+```
+which should be in line 85 of STV.cc in `src`.
+
 ### Running Unit Tests
 
 Typing `make all` created both **elect.out** and also all the Unit Tests executable. To run all these unit tests simultaneously, type in:

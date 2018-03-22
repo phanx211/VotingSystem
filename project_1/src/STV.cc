@@ -74,6 +74,7 @@ void STV::MoveCandidate(string can_name, CandidateList& src,
 void STV::CalculateDroop() {
   droop = floor(get_num_ballots() / (get_num_seats() + 1)) + 1;
 }
+
 void STV::Algorithm() {
   int rnd = 1;
   int bal_no;

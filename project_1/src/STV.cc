@@ -80,6 +80,9 @@ void STV::Algorithm() {
   string highest_name;
   int itr = get_num_ballots();
 
+  // Shuffle ballots before running election
+  get_ballots().ShuffleBallots();
+
   // While seats are not filled
   while (get_elected().ListSize() != get_num_seats()) {
     if (get_candidates().ListSize() == 0) {

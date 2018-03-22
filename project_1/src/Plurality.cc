@@ -72,5 +72,20 @@ void Plurality::Algorithm() {
   	}
   }
   cout << endl;
-
+  freopen("/dev/tty", "a", stdout);
+  cout << endl << "##########################################" << endl;
+  if (get_num_seats() > 1) {
+	cout << "THE WINNERS ARE: ";
+  }
+  else {
+  	  cout << "THE WINNER IS: ";
+  }
+  for (unsigned i = 0; i<winners.size(); i++) {
+    cout << winners[i].get_name();
+  	if (i<winners.size()-1) {
+  		cout << ", ";
+  	}
+  }
+  cout << endl << "##########################################" << endl;
+  cout << endl;
 }

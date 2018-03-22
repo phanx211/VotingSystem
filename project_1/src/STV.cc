@@ -213,7 +213,22 @@ void STV::Algorithm() {
 	}
   }
   cout << endl;
-
+  freopen("/dev/tty", "a", stdout);
+  cout << endl << "##########################################" << endl;
+  if (get_num_seats() > 1) {
+  cout << "THE WINNERS ARE: ";
+  }
+  else {
+      cout << "THE WINNER IS: ";
+  }
+  for (unsigned i = 0; i<get_elected().ListSize(); i++) {
+    cout << get_elected().get_candidate_list()[i].get_name();
+  if (i<get_elected().ListSize()-1) {
+    cout << ", ";
+  }
+  }
+  cout << endl << "##########################################" << endl;
+  cout << endl;
 
 
 

@@ -1,7 +1,7 @@
 /*!******************************************************************************
- * Name            : Ballot.h
+ * Name            : Election.h
  * Project         : Voting System
- * Description     : Header file for Ballot
+ * Description     : Header file for Election
  * Original Authors : Maxwell Dahl, Sanjana Jonnalagadda, Anthony Phan,
                       Ronny Yogiswara
  ******************************************************************************/
@@ -32,6 +32,7 @@ using namespace std;
 */
 
 class Election {
+	
 	public:
 		//Constructors
 		Election();

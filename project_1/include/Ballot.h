@@ -26,6 +26,7 @@
 *    - The Ballot class stores the ballot number, the voting type pertaining to the ballot, and the votes for that ballot candidates
 */
 class Ballot {
+	
 	public:
 		//Constructor
 		Ballot();
@@ -45,8 +46,6 @@ class Ballot {
 		* @brief Gets the ballot number from the class
 		*/
 		int get_ballot_no() {return ballot_no;}
-
-		// int get_preferences() {return preferences;}
 
 		int get_current() {return current;}
 
@@ -71,7 +70,6 @@ class Ballot {
 	private:
 		int ballot_no;
 		std::vector<int> votes;
-		// int preferences;
 		int current;
 };
 

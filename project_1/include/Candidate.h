@@ -17,6 +17,7 @@
  * @brief An object representing a Candidate
  */
 class Candidate {
+	
 	public:
 		//Constructors
 		Candidate();
@@ -38,7 +39,9 @@ class Candidate {
 		BallotList& get_votes() {return votes;}
 
 		void set_name(std::string name) {this->name = name;}
+
 		void set_votes(BallotList votes) {this->votes = votes;}
+
 	private:
 		std::string name;
 		BallotList votes;

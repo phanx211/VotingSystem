@@ -28,6 +28,7 @@
 	* and remove the Ballots from the this array.
   */
 class BallotList {
+	
 	public:
 		//Constructors
 		BallotList();

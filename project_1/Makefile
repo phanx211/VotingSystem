@@ -10,7 +10,7 @@ OBJDIR = $(BUILDDIR)/obj/src
 EXEFILE = elect.out
 CXXTEST = ./cxxtest/bin/cxxtestgen --error-printer -o
 CXXCOMPILE = g++ -I./cxxtest -o
-TESTDIR = tests
+TESTDIR = testing
 
 # The list of files to compile for this project.  Defaults to all
 # of the .cpp and .cc files in the source directory.  (We use both .cpp

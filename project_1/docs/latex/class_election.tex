@@ -1,0 +1,195 @@
+\hypertarget{class_election}{}\section{Election Class Reference}
+\label{class_election}\index{Election@{Election}}
+
+
+An object that receives information about the number of seats, candidates, and ballots. Likewise, the class will store objects of \mbox{\hyperlink{class_candidate_list}{Candidate\+List}} and \mbox{\hyperlink{class_ballot_list}{Ballot\+List}}.  
+
+
+
+
+{\ttfamily \#include $<$Election.\+h$>$}
+
+Inheritance diagram for Election\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_election}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_election_af15999d79dbd51ad41380207a2fb0ba4}{Election}} (int num\+\_\+seats, int num\+\_\+candidates, int num\+\_\+ballots)
+\begin{DoxyCompactList}\small\item\em Creates an \mbox{\hyperlink{class_election}{Election}} instance that gets the number of seats available, number of cadidates running and number of ballots. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_election_a9582c81b6b89805f531197efb0e34db8}\label{class_election_a9582c81b6b89805f531197efb0e34db8}} 
+int \mbox{\hyperlink{class_election_a9582c81b6b89805f531197efb0e34db8}{get\+\_\+num\+\_\+seats}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of seats available. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_election_ad39320c11e6c6d5c95dc6128a2dd0a07}{set\+\_\+ballot\+\_\+no}} (int s)
+\begin{DoxyCompactList}\small\item\em Sets the number of seats available (s) to the local variable (num\+\_\+seats) to store the value of the number of seats available. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_election_aabeb70eb7aae4e60c6173b71e4218d96}\label{class_election_aabeb70eb7aae4e60c6173b71e4218d96}} 
+int \mbox{\hyperlink{class_election_aabeb70eb7aae4e60c6173b71e4218d96}{get\+\_\+num\+\_\+candidates}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of candidates running. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_election_ad73c41e88247a694c44370b4d28c04d0}{set\+\_\+num\+\_\+candidates}} (int c)
+\begin{DoxyCompactList}\small\item\em Sets the number of candidates (c) to the local variable (num\+\_\+candidates) to store the value of the number of candidates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_election_a99f8cd6773f5c046b975eb39109cd123}\label{class_election_a99f8cd6773f5c046b975eb39109cd123}} 
+int \mbox{\hyperlink{class_election_a99f8cd6773f5c046b975eb39109cd123}{get\+\_\+num\+\_\+ballots}} ()
+\begin{DoxyCompactList}\small\item\em Gets the number of ballots. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_election_ae8f4cc654d20ae3677f01584a62d33d0}{set\+\_\+num\+\_\+ballots}} (int b)
+\begin{DoxyCompactList}\small\item\em Sets the number of ballots (b) to the local variable (num\+\_\+ballots) to store the value of the number of ballots for the election. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_election_abb17fd9395b0931c5f635c2c0dd30427}\label{class_election_abb17fd9395b0931c5f635c2c0dd30427}} 
+\mbox{\hyperlink{class_candidate_list}{Candidate\+List}} \& \mbox{\hyperlink{class_election_abb17fd9395b0931c5f635c2c0dd30427}{get\+\_\+candidates}} ()
+\begin{DoxyCompactList}\small\item\em Returns the list of candidates in election. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_election_a726cbdaaca392d54675954d6d86f10f0}{set\+\_\+votes}} (\mbox{\hyperlink{class_candidate_list}{Candidate\+List}} cs)
+\begin{DoxyCompactList}\small\item\em sets the candidatess to equal to the votes from the \mbox{\hyperlink{class_candidate_list}{Candidate\+List}} Class \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_election_a0100bf20e0c74b160867ac15d814a406}\label{class_election_a0100bf20e0c74b160867ac15d814a406}} 
+vector$<$ string $>$ {\bfseries get\+\_\+names} ()
+\item 
+\mbox{\Hypertarget{class_election_aff53e44590e75eabca7ca1f10f287c2a}\label{class_election_aff53e44590e75eabca7ca1f10f287c2a}} 
+\mbox{\hyperlink{class_ballot_list}{Ballot\+List}} \& \mbox{\hyperlink{class_election_aff53e44590e75eabca7ca1f10f287c2a}{get\+\_\+ballots}} ()
+\begin{DoxyCompactList}\small\item\em Returns the list of ballots in the election. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_election_a4bf9c6eb717929f143ea89718cb09fe9}{set\+\_\+ballots}} (\mbox{\hyperlink{class_ballot_list}{Ballot\+List}} bs)
+\begin{DoxyCompactList}\small\item\em sets the ballots to equal to the ballots obtained from the \mbox{\hyperlink{class_ballot_list}{Ballot\+List}} (bs) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_election_a70752317f5b403a3e779b3bf2a8c91f6}\label{class_election_a70752317f5b403a3e779b3bf2a8c91f6}} 
+void \mbox{\hyperlink{class_election_a70752317f5b403a3e779b3bf2a8c91f6}{Log}} ()
+\begin{DoxyCompactList}\small\item\em Pushes a string to a log file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_election_a769bc27e7ab0a091eee5d11f3b382032}\label{class_election_a769bc27e7ab0a091eee5d11f3b382032}} 
+void \mbox{\hyperlink{class_election_a769bc27e7ab0a091eee5d11f3b382032}{Display\+Results}} ()
+\begin{DoxyCompactList}\small\item\em Shows Result of \mbox{\hyperlink{class_election}{Election}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_election_ad9b7c2ce89047e79429c6ba00f428343}{Move\+Ballot}} (int bal\+\_\+no, \mbox{\hyperlink{class_ballot_list}{Ballot\+List}} \&src, \mbox{\hyperlink{class_ballot_list}{Ballot\+List}} \&dst)
+\begin{DoxyCompactList}\small\item\em Moves ballot from one place to another. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_election_ad8977ccd4118d7995bf286886759bbcf}\label{class_election_ad8977ccd4118d7995bf286886759bbcf}} 
+void \mbox{\hyperlink{class_election_ad8977ccd4118d7995bf286886759bbcf}{Read\+Names}} (string filename)
+\begin{DoxyCompactList}\small\item\em Reads the csv file to initialize the candidates. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_election_a4b5e266bd47407f7401825a00ddf9dfe}\label{class_election_a4b5e266bd47407f7401825a00ddf9dfe}} 
+\mbox{\hyperlink{class_candidate_list}{Candidate\+List}} \& {\bfseries get\+\_\+elected} ()
+\item 
+\mbox{\Hypertarget{class_election_a30145af53c1a39812e9b4fc6e53ebeb0}\label{class_election_a30145af53c1a39812e9b4fc6e53ebeb0}} 
+\mbox{\hyperlink{class_candidate_list}{Candidate\+List}} \& {\bfseries get\+\_\+non\+\_\+elected} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An object that receives information about the number of seats, candidates, and ballots. Likewise, the class will store objects of \mbox{\hyperlink{class_candidate_list}{Candidate\+List}} and \mbox{\hyperlink{class_ballot_list}{Ballot\+List}}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_election_af15999d79dbd51ad41380207a2fb0ba4}\label{class_election_af15999d79dbd51ad41380207a2fb0ba4}} 
+\index{Election@{Election}!Election@{Election}}
+\index{Election@{Election}!Election@{Election}}
+\subsubsection{\texorpdfstring{Election()}{Election()}}
+{\footnotesize\ttfamily Election\+::\+Election (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+seats,  }\item[{int}]{num\+\_\+candidates,  }\item[{int}]{num\+\_\+ballots }\end{DoxyParamCaption})}
+
+
+
+Creates an \mbox{\hyperlink{class_election}{Election}} instance that gets the number of seats available, number of cadidates running and number of ballots. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+seats} & Gets the inputted value of number of seats available for the election.\\
+\hline
+{\em num\+\_\+cadidates} & Gets the value of number of candidates running.\\
+\hline
+{\em num\+\_\+ballots} & Gets the number of ballots there are in voting. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_election_ad9b7c2ce89047e79429c6ba00f428343}\label{class_election_ad9b7c2ce89047e79429c6ba00f428343}} 
+\index{Election@{Election}!Move\+Ballot@{Move\+Ballot}}
+\index{Move\+Ballot@{Move\+Ballot}!Election@{Election}}
+\subsubsection{\texorpdfstring{Move\+Ballot()}{MoveBallot()}}
+{\footnotesize\ttfamily void Election\+::\+Move\+Ballot (\begin{DoxyParamCaption}\item[{int}]{bal\+\_\+no,  }\item[{\mbox{\hyperlink{class_ballot_list}{Ballot\+List}} \&}]{src,  }\item[{\mbox{\hyperlink{class_ballot_list}{Ballot\+List}} \&}]{dst }\end{DoxyParamCaption})}
+
+
+
+Moves ballot from one place to another. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bal\+\_\+no} & Variable to store the ballot number\\
+\hline
+{\em src} & The \mbox{\hyperlink{class_ballot_list}{Ballot\+List}} object passed in\\
+\hline
+{\em dst} & The \mbox{\hyperlink{class_ballot_list}{Ballot\+List}} object that the src will be stored in \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_election_ad39320c11e6c6d5c95dc6128a2dd0a07}\label{class_election_ad39320c11e6c6d5c95dc6128a2dd0a07}} 
+\index{Election@{Election}!set\+\_\+ballot\+\_\+no@{set\+\_\+ballot\+\_\+no}}
+\index{set\+\_\+ballot\+\_\+no@{set\+\_\+ballot\+\_\+no}!Election@{Election}}
+\subsubsection{\texorpdfstring{set\+\_\+ballot\+\_\+no()}{set\_ballot\_no()}}
+{\footnotesize\ttfamily void Election\+::set\+\_\+ballot\+\_\+no (\begin{DoxyParamCaption}\item[{int}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the number of seats available (s) to the local variable (num\+\_\+seats) to store the value of the number of seats available. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Store the number of seats available. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_election_a4bf9c6eb717929f143ea89718cb09fe9}\label{class_election_a4bf9c6eb717929f143ea89718cb09fe9}} 
+\index{Election@{Election}!set\+\_\+ballots@{set\+\_\+ballots}}
+\index{set\+\_\+ballots@{set\+\_\+ballots}!Election@{Election}}
+\subsubsection{\texorpdfstring{set\+\_\+ballots()}{set\_ballots()}}
+{\footnotesize\ttfamily void Election\+::set\+\_\+ballots (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ballot_list}{Ballot\+List}}}]{bs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sets the ballots to equal to the ballots obtained from the \mbox{\hyperlink{class_ballot_list}{Ballot\+List}} (bs) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bs} & Variable to get the ballots fro m the \mbox{\hyperlink{class_ballot_list}{Ballot\+List}} \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_election_ae8f4cc654d20ae3677f01584a62d33d0}\label{class_election_ae8f4cc654d20ae3677f01584a62d33d0}} 
+\index{Election@{Election}!set\+\_\+num\+\_\+ballots@{set\+\_\+num\+\_\+ballots}}
+\index{set\+\_\+num\+\_\+ballots@{set\+\_\+num\+\_\+ballots}!Election@{Election}}
+\subsubsection{\texorpdfstring{set\+\_\+num\+\_\+ballots()}{set\_num\_ballots()}}
+{\footnotesize\ttfamily void Election\+::set\+\_\+num\+\_\+ballots (\begin{DoxyParamCaption}\item[{int}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the number of ballots (b) to the local variable (num\+\_\+ballots) to store the value of the number of ballots for the election. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & Store the number of ballots \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_election_ad73c41e88247a694c44370b4d28c04d0}\label{class_election_ad73c41e88247a694c44370b4d28c04d0}} 
+\index{Election@{Election}!set\+\_\+num\+\_\+candidates@{set\+\_\+num\+\_\+candidates}}
+\index{set\+\_\+num\+\_\+candidates@{set\+\_\+num\+\_\+candidates}!Election@{Election}}
+\subsubsection{\texorpdfstring{set\+\_\+num\+\_\+candidates()}{set\_num\_candidates()}}
+{\footnotesize\ttfamily void Election\+::set\+\_\+num\+\_\+candidates (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the number of candidates (c) to the local variable (num\+\_\+candidates) to store the value of the number of candidates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & Store the number of canidates \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_election_a726cbdaaca392d54675954d6d86f10f0}\label{class_election_a726cbdaaca392d54675954d6d86f10f0}} 
+\index{Election@{Election}!set\+\_\+votes@{set\+\_\+votes}}
+\index{set\+\_\+votes@{set\+\_\+votes}!Election@{Election}}
+\subsubsection{\texorpdfstring{set\+\_\+votes()}{set\_votes()}}
+{\footnotesize\ttfamily void Election\+::set\+\_\+votes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_candidate_list}{Candidate\+List}}}]{cs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+sets the candidatess to equal to the votes from the \mbox{\hyperlink{class_candidate_list}{Candidate\+List}} Class 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cs} & Variable to get the votes from the \mbox{\hyperlink{class_candidate_list}{Candidate\+List}} \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Election.\+h\item 
+src/Election.\+cc\end{DoxyCompactItemize}

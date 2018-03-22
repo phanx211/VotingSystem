@@ -1,0 +1,122 @@
+\hypertarget{class_candidate_list}{}\section{Candidate\+List Class Reference}
+\label{class_candidate_list}\index{Candidate\+List@{Candidate\+List}}
+
+
+An object containing a list of candidates.  
+
+
+
+
+{\ttfamily \#include $<$Candidate\+List.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_candidate_list_a93e59d3b7c8f9cfc11f85eda636cd96d}\label{class_candidate_list_a93e59d3b7c8f9cfc11f85eda636cd96d}} 
+\mbox{\hyperlink{class_candidate_list_a93e59d3b7c8f9cfc11f85eda636cd96d}{Candidate\+List}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_candidate_list}{Candidate\+List}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_candidate_list_a36a07e05ada013fdb02f5b81badc1cc3}{Add}} (\mbox{\hyperlink{class_candidate}{Candidate}} c)
+\begin{DoxyCompactList}\small\item\em Adds candidate to the list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_candidate}{Candidate}} \mbox{\hyperlink{class_candidate_list_a566cced2b1375525a5bc86686d0e4a7e}{Remove}} (std\+::string name)
+\begin{DoxyCompactList}\small\item\em Removes candidate form list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_candidate_list_ab86e3029ea749dae3646c3c491e9a628}\label{class_candidate_list_ab86e3029ea749dae3646c3c491e9a628}} 
+\mbox{\hyperlink{class_candidate}{Candidate}} \& \mbox{\hyperlink{class_candidate_list_ab86e3029ea749dae3646c3c491e9a628}{Return\+Loser}} ()
+\begin{DoxyCompactList}\small\item\em Returns the candidate with the lowest votes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_candidate_list_a3430f7e5c361bde4ae4f1cae3aee0c15}\label{class_candidate_list_a3430f7e5c361bde4ae4f1cae3aee0c15}} 
+\mbox{\hyperlink{class_candidate}{Candidate}} \mbox{\hyperlink{class_candidate_list_a3430f7e5c361bde4ae4f1cae3aee0c15}{Return\+Winner}} ()
+\begin{DoxyCompactList}\small\item\em Returns the candidate with the highest votes. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_candidate}{Candidate}} $>$ \mbox{\hyperlink{class_candidate_list_abfdc825213700c4fe146dba1ec599d0d}{Return\+Winners}} (int num\+\_\+seats)
+\begin{DoxyCompactList}\small\item\em Returns a vector of candidates with highest vote. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_candidate_list_abc2c790e8597f07e047bdb73e981da52}\label{class_candidate_list_abc2c790e8597f07e047bdb73e981da52}} 
+int \mbox{\hyperlink{class_candidate_list_abc2c790e8597f07e047bdb73e981da52}{List\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Returns the size of the list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_candidate_list_ad1af8464cd59a666efe876302d79b043}\label{class_candidate_list_ad1af8464cd59a666efe876302d79b043}} 
+std\+::vector$<$ \mbox{\hyperlink{class_candidate}{Candidate}} $>$ \& \mbox{\hyperlink{class_candidate_list_ad1af8464cd59a666efe876302d79b043}{get\+\_\+candidate\+\_\+list}} ()
+\begin{DoxyCompactList}\small\item\em Returns the vector of candidates. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_candidate_list_a541bbc8c8b05edadc46c72567a5c446a}{set\+\_\+candidate\+\_\+list}} (std\+::vector$<$ \mbox{\hyperlink{class_candidate}{Candidate}} $>$ cl)
+\begin{DoxyCompactList}\small\item\em Sets candidate\+\_\+list (a vector). \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_candidate_list_ae2aec43811ad71df57b14cd234cad959}\label{class_candidate_list_ae2aec43811ad71df57b14cd234cad959}} 
+\mbox{\hyperlink{class_candidate}{Candidate}} \& {\bfseries Return\+Candidate} (string s)
+\item 
+\mbox{\Hypertarget{class_candidate_list_a130f3c30b4800fc768674497272b91fb}\label{class_candidate_list_a130f3c30b4800fc768674497272b91fb}} 
+bool {\bfseries There\+Exists} (string s)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+An object containing a list of candidates. 
+
+
+\begin{DoxyItemize}
+\item The Candidae\+List class will be the main structure in which Ballots are stored.
+\item The \mbox{\hyperlink{class_candidate_list}{Candidate\+List}} stores an array of \mbox{\hyperlink{class_candidate}{Candidate}} classes. It then has options to add, and remove the Ballots from this array
+\item It also has a function that will return the \mbox{\hyperlink{class_candidate}{Candidate}} who has the lowest Ballots. 
+\end{DoxyItemize}
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_candidate_list_a36a07e05ada013fdb02f5b81badc1cc3}\label{class_candidate_list_a36a07e05ada013fdb02f5b81badc1cc3}} 
+\index{Candidate\+List@{Candidate\+List}!Add@{Add}}
+\index{Add@{Add}!Candidate\+List@{Candidate\+List}}
+\subsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void Candidate\+List\+::\+Add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_candidate}{Candidate}}}]{c }\end{DoxyParamCaption})}
+
+
+
+Adds candidate to the list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The candidate to add. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_candidate_list_a566cced2b1375525a5bc86686d0e4a7e}\label{class_candidate_list_a566cced2b1375525a5bc86686d0e4a7e}} 
+\index{Candidate\+List@{Candidate\+List}!Remove@{Remove}}
+\index{Remove@{Remove}!Candidate\+List@{Candidate\+List}}
+\subsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_candidate}{Candidate}} Candidate\+List\+::\+Remove (\begin{DoxyParamCaption}\item[{std\+::string}]{name }\end{DoxyParamCaption})}
+
+
+
+Removes candidate form list. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the candidate to remove. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_candidate_list_abfdc825213700c4fe146dba1ec599d0d}\label{class_candidate_list_abfdc825213700c4fe146dba1ec599d0d}} 
+\index{Candidate\+List@{Candidate\+List}!Return\+Winners@{Return\+Winners}}
+\index{Return\+Winners@{Return\+Winners}!Candidate\+List@{Candidate\+List}}
+\subsubsection{\texorpdfstring{Return\+Winners()}{ReturnWinners()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_candidate}{Candidate}} $>$ Candidate\+List\+::\+Return\+Winners (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+seats }\end{DoxyParamCaption})}
+
+
+
+Returns a vector of candidates with highest vote. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+seats} & The number of candidates to return \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_candidate_list_a541bbc8c8b05edadc46c72567a5c446a}\label{class_candidate_list_a541bbc8c8b05edadc46c72567a5c446a}} 
+\index{Candidate\+List@{Candidate\+List}!set\+\_\+candidate\+\_\+list@{set\+\_\+candidate\+\_\+list}}
+\index{set\+\_\+candidate\+\_\+list@{set\+\_\+candidate\+\_\+list}!Candidate\+List@{Candidate\+List}}
+\subsubsection{\texorpdfstring{set\+\_\+candidate\+\_\+list()}{set\_candidate\_list()}}
+{\footnotesize\ttfamily void Candidate\+List\+::set\+\_\+candidate\+\_\+list (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_candidate}{Candidate}} $>$}]{cl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets candidate\+\_\+list (a vector). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cl} & Vector to set candidate\+\_\+list to. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Candidate\+List.\+h\item 
+src/Candidate\+List.\+cc\end{DoxyCompactItemize}

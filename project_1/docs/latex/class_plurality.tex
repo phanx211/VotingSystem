@@ -1,0 +1,91 @@
+\hypertarget{class_plurality}{}\section{Plurality Class Reference}
+\label{class_plurality}\index{Plurality@{Plurality}}
+
+
+The \mbox{\hyperlink{class_plurality}{Plurality}} class inherits from the \mbox{\hyperlink{class_election}{Election}} class. The class implements the \mbox{\hyperlink{class_plurality}{Plurality}} algorithm to identify the winning candidates.  
+
+
+
+
+{\ttfamily \#include $<$Plurality.\+h$>$}
+
+Inheritance diagram for Plurality\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_plurality}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plurality_a26d4ba756a5bfc0d5c8d40865e5ecbb8}\label{class_plurality_a26d4ba756a5bfc0d5c8d40865e5ecbb8}} 
+\mbox{\hyperlink{class_plurality_a26d4ba756a5bfc0d5c8d40865e5ecbb8}{Plurality}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for \mbox{\hyperlink{class_plurality}{Plurality}}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_plurality_a4fc0116515730145cf4d4cfedbf34b1c}{Plurality}} (int num\+\_\+seats, int num\+\_\+candidates, int num\+\_\+ballots)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{class_plurality}{Plurality}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plurality_a63b556aa77c6ea04f52a42fadc9474e8}\label{class_plurality_a63b556aa77c6ea04f52a42fadc9474e8}} 
+void \mbox{\hyperlink{class_plurality_a63b556aa77c6ea04f52a42fadc9474e8}{Algorithm}} ()
+\begin{DoxyCompactList}\small\item\em Main driver of the \mbox{\hyperlink{class_plurality}{Plurality}} voting. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_plurality_a9617e0aacc5e6fb714632f4657ee6576}{Return\+Highest\+Vote\+Index}} (\mbox{\hyperlink{class_ballot}{Ballot}} b)
+\begin{DoxyCompactList}\small\item\em Returns the index of the highest vote in a ballot. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_plurality}{Plurality}} class inherits from the \mbox{\hyperlink{class_election}{Election}} class. The class implements the \mbox{\hyperlink{class_plurality}{Plurality}} algorithm to identify the winning candidates. 
+
+
+
+ Name \+: \mbox{\hyperlink{_ballot_8h_source}{Ballot.\+h}} Project \+: Voting System Description \+: Header file for \mbox{\hyperlink{class_ballot}{Ballot}} Original Authors \+: Maxwell Dahl, Sanjana Jonnalagadda, Anthony Phan, Ronny Yogiswara
+
+
+
+ Includes
+
+
+
+ Class Definitions 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_plurality_a4fc0116515730145cf4d4cfedbf34b1c}\label{class_plurality_a4fc0116515730145cf4d4cfedbf34b1c}} 
+\index{Plurality@{Plurality}!Plurality@{Plurality}}
+\index{Plurality@{Plurality}!Plurality@{Plurality}}
+\subsubsection{\texorpdfstring{Plurality()}{Plurality()}}
+{\footnotesize\ttfamily Plurality\+::\+Plurality (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+seats,  }\item[{int}]{num\+\_\+candidates,  }\item[{int}]{num\+\_\+ballots }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{class_plurality}{Plurality}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+seats} & Number of available seats in election \\
+\hline
+{\em num\+\_\+candidates} & Number of total candidates in election \\
+\hline
+{\em num\+\_\+ballots} & Number of total ballots in election \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_plurality_a9617e0aacc5e6fb714632f4657ee6576}\label{class_plurality_a9617e0aacc5e6fb714632f4657ee6576}} 
+\index{Plurality@{Plurality}!Return\+Highest\+Vote\+Index@{Return\+Highest\+Vote\+Index}}
+\index{Return\+Highest\+Vote\+Index@{Return\+Highest\+Vote\+Index}!Plurality@{Plurality}}
+\subsubsection{\texorpdfstring{Return\+Highest\+Vote\+Index()}{ReturnHighestVoteIndex()}}
+{\footnotesize\ttfamily int Plurality\+::\+Return\+Highest\+Vote\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ballot}{Ballot}}}]{b }\end{DoxyParamCaption})}
+
+
+
+Returns the index of the highest vote in a ballot. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em b} & \mbox{\hyperlink{class_ballot}{Ballot}} to read through. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/Plurality.\+h\item 
+src/Plurality.\+cc\end{DoxyCompactItemize}

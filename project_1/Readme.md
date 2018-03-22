@@ -14,6 +14,9 @@ make all
 ```
 This will create all files which include an executable file **elect.out** and all the test files.
 
+**NOTE:**
+We decided to put the makefile in the project folder instead of the src folder as it makes it simpler to link both testing and source compilation from a single command.
+
 To launch the Voting System, type in:
 ```
 ./elect.out

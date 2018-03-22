@@ -49,7 +49,5 @@ compile_options.json
 
 # Build process
 build
-docs/html
-docs/latex
 main
 test

@@ -32,57 +32,58 @@ using namespace std;
  *    - It also has a function that will return the Candidate who has the lowest Ballots.
  */
 class CandidateList {
-public:
-  /**
-  * @brief Constructor for CandidateList
-  *
-  */
-  CandidateList();
-  /**
-  * @brief Adds candidate to the list.
-  *
-  * @param c The candidate to add.
-  */
-  void Add(Candidate c);
-  /**
-  * @brief Removes candidate form list.
-  *
-  * @param name The name of the candidate to remove.
-  */
-  Candidate Remove(std::string name);
-  /**
-  * @brief Returns the candidate with the lowest votes.
-  */
-  Candidate& ReturnLoser();
-  /**
-  * @brief Returns the candidate with the highest votes.
-  */
-  Candidate ReturnWinner();
-  /**
-  * @brief Returns a vector of candidates with highest vote.
-  * @param num_seats The number of candidates to return
-  */
-  std::vector<Candidate> ReturnWinners(int num_seats);
-  /**
-  * @brief Returns the size of the list
-  */
-  int ListSize();
-  /**
-  * @brief Returns the vector of candidates.
-  *
-  */
-  std::vector<Candidate>& get_candidate_list(){return candidate_list;}
-  /**
-  * @brief Sets candidate_list (a vector).
-  *
-  * @param cl Vector to set candidate_list to.
-  */
-  void set_candidate_list(std::vector<Candidate> cl) {candidate_list = cl;}
 
-  Candidate& ReturnCandidate(string s);
+  public:
+    /**
+    * @brief Constructor for CandidateList
+    *
+    */
+    CandidateList();
+    /**
+    * @brief Adds candidate to the list.
+    *
+    * @param c The candidate to add.
+    */
+    void Add(Candidate c);
+    /**
+    * @brief Removes candidate form list.
+    *
+    * @param name The name of the candidate to remove.
+    */
+    Candidate Remove(std::string name);
+    /**
+    * @brief Returns the candidate with the lowest votes.
+    */
+    Candidate& ReturnLoser();
+    /**
+    * @brief Returns the candidate with the highest votes.
+    */
+    Candidate ReturnWinner();
+    /**
+    * @brief Returns a vector of candidates with highest vote.
+    * @param num_seats The number of candidates to return
+    */
+    std::vector<Candidate> ReturnWinners(int num_seats);
+    /**
+    * @brief Returns the size of the list
+    */
+    int ListSize();
+    /**
+    * @brief Returns the vector of candidates.
+    *
+    */
+    std::vector<Candidate>& get_candidate_list(){return candidate_list;}
+    /**
+    * @brief Sets candidate_list (a vector).
+    *
+    * @param cl Vector to set candidate_list to.
+    */
+    void set_candidate_list(std::vector<Candidate> cl) {candidate_list = cl;}
 
-  bool ThereExists(string s);
+    Candidate& ReturnCandidate(string s);
 
-private:
-  std::vector<Candidate> candidate_list;
+    bool ThereExists(string s);
+
+  private:
+    std::vector<Candidate> candidate_list;
 };

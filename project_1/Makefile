@@ -1,7 +1,7 @@
 # CSCI5801 Project1 makefile
 
 CC = g++
-CFLAGS = -c
+CFLAGS = -c -w
 LFLAGS =
 BUILDDIR = build
 SRCDIR = src

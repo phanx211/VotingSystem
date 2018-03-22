@@ -21,7 +21,7 @@ To launch the Voting System, type in:
 ```
 ./elect.out
 ```
-You will then be prompted to type in the number of candidates in the election, the number of seats, ballots, the voting type to run the election on and the name of the CSV file that contains all the ballots. When specifying the CSV file, enter its location relative to the makefile. (ex. if the CSV is in the same directory as the makefile, the user should enter "[name].csv" without the quotes.)
+You will then be prompted to type in the number of candidates in the election, the number of seats, ballots, the voting type to run the election on and the name of the CSV file that contains all the ballots. When specifying the CSV file, enter its location relative to the makefile. (ex. if the CSV is in the same directory as the makefile, the user should enter "[filename].csv" without the quotes.)
 
 The algorithm will then run through the respective voting algorithm and display all the results in **log.txt** inside the project file.
 

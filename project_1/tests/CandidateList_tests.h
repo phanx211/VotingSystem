@@ -13,6 +13,7 @@ using namespace std;
 class CandidateListTestSuite : public CxxTest::TestSuite {
 
   public:
+    
     void test_generic_constructor() {
       CandidateList c;
       vector<Candidate> empty;

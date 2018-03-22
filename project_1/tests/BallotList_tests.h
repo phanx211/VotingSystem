@@ -12,7 +12,7 @@ class BallotListTestSuite : public CxxTest::TestSuite {
   public:
 
     void test_ShuffleBallots() {
-		BallotList b;
+		  BallotList b;
   		vector<int> v;
   		v.push_back(1);
   		v.push_back(2);

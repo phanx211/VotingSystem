@@ -1,0 +1,455 @@
+Round 1
+Distributing Ballot 10 to 11
+Distributing Ballot 9 to 2
+Distributing Ballot 6 to 9
+Distributing Ballot 15 to 2
+2 reached Droop!!!
+Distributing Ballot 2 to 5
+Distributing Ballot 8 to 10
+Distributing Ballot 11 to 1
+Distributing Ballot 3 to 6
+Distributing Ballot 14 to 1
+1 reached Droop!!!
+Distributing Ballot 4 to 7
+Distributing Ballot 13 to 3
+Distributing Ballot 7 to 3
+3 reached Droop!!!
+Distributing Ballot 5 to 8
+Distributing Ballot 1 to 4
+Distributing Ballot 12 to 4
+4 reached Droop!!!
+LOSER IS 5 with size 1
+Candidate size is 6
+###STILL IN THE RUN###
+6 Votes: 1
+7 Votes: 1
+8 Votes: 1
+9 Votes: 1
+10 Votes: 1
+11 Votes: 1
+###ELECTED###
+2 Votes: 2
+1 Votes: 2
+3 Votes: 2
+4 Votes: 2
+###NON ELECTED###
+12 Votes: 0
+13 Votes: 0
+14 Votes: 0
+15 Votes: 0
+16 Votes: 0
+17 Votes: 0
+18 Votes: 0
+19 Votes: 0
+20 Votes: 0
+21 Votes: 0
+22 Votes: 0
+23 Votes: 0
+24 Votes: 0
+25 Votes: 0
+26 Votes: 0
+27 Votes: 0
+28 Votes: 0
+29 Votes: 0
+30 Votes: 0
+31 Votes: 0
+32 Votes: 0
+33 Votes: 0
+34 Votes: 0
+35 Votes: 0
+36 Votes: 0
+37 Votes: 0
+38 Votes: 0
+39 Votes: 0
+40 Votes: 0
+41 Votes: 0
+42 Votes: 0
+43 Votes: 0
+44 Votes: 0
+45 Votes: 0
+46 Votes: 0
+47 Votes: 0
+48 Votes: 0
+49 Votes: 0
+50 Votes: 0
+51 Votes: 0
+52 Votes: 0
+53 Votes: 0
+54 Votes: 0
+55 Votes: 0
+56 Votes: 0
+57 Votes: 0
+58 Votes: 0
+59 Votes: 0
+60 Votes: 0
+61 Votes: 0
+62 Votes: 0
+63 Votes: 0
+64 Votes: 0
+65 Votes: 0
+66 Votes: 0
+67 Votes: 0
+68 Votes: 0
+69 Votes: 0
+70 Votes: 0
+71 Votes: 0
+72 Votes: 0
+73 Votes: 0
+74 Votes: 0
+75 Votes: 0
+76 Votes: 0
+77 Votes: 0
+78 Votes: 0
+79 Votes: 0
+80 Votes: 0
+81 Votes: 0
+82 Votes: 0
+83 Votes: 0
+84 Votes: 0
+85 Votes: 0
+86 Votes: 0
+87 Votes: 0
+88 Votes: 0
+89 Votes: 0
+90 Votes: 0
+91 Votes: 0
+92 Votes: 0
+93 Votes: 0
+94 Votes: 0
+95 Votes: 0
+96 Votes: 0
+97 Votes: 0
+98 Votes: 0
+99 Votes: 0
+100 Votes: 0
+5 Votes: 0
+UNACCOUNTED VOTES IN THE MIX: 1
+Round 2
+Distributing Ballot 2 to 6
+6 reached Droop!!!
+LOSER IS 7 with size 1
+Candidate size is 4
+###STILL IN THE RUN###
+8 Votes: 1
+9 Votes: 1
+10 Votes: 1
+11 Votes: 1
+###ELECTED###
+2 Votes: 2
+1 Votes: 2
+3 Votes: 2
+4 Votes: 2
+6 Votes: 2
+###NON ELECTED###
+12 Votes: 0
+13 Votes: 0
+14 Votes: 0
+15 Votes: 0
+16 Votes: 0
+17 Votes: 0
+18 Votes: 0
+19 Votes: 0
+20 Votes: 0
+21 Votes: 0
+22 Votes: 0
+23 Votes: 0
+24 Votes: 0
+25 Votes: 0
+26 Votes: 0
+27 Votes: 0
+28 Votes: 0
+29 Votes: 0
+30 Votes: 0
+31 Votes: 0
+32 Votes: 0
+33 Votes: 0
+34 Votes: 0
+35 Votes: 0
+36 Votes: 0
+37 Votes: 0
+38 Votes: 0
+39 Votes: 0
+40 Votes: 0
+41 Votes: 0
+42 Votes: 0
+43 Votes: 0
+44 Votes: 0
+45 Votes: 0
+46 Votes: 0
+47 Votes: 0
+48 Votes: 0
+49 Votes: 0
+50 Votes: 0
+51 Votes: 0
+52 Votes: 0
+53 Votes: 0
+54 Votes: 0
+55 Votes: 0
+56 Votes: 0
+57 Votes: 0
+58 Votes: 0
+59 Votes: 0
+60 Votes: 0
+61 Votes: 0
+62 Votes: 0
+63 Votes: 0
+64 Votes: 0
+65 Votes: 0
+66 Votes: 0
+67 Votes: 0
+68 Votes: 0
+69 Votes: 0
+70 Votes: 0
+71 Votes: 0
+72 Votes: 0
+73 Votes: 0
+74 Votes: 0
+75 Votes: 0
+76 Votes: 0
+77 Votes: 0
+78 Votes: 0
+79 Votes: 0
+80 Votes: 0
+81 Votes: 0
+82 Votes: 0
+83 Votes: 0
+84 Votes: 0
+85 Votes: 0
+86 Votes: 0
+87 Votes: 0
+88 Votes: 0
+89 Votes: 0
+90 Votes: 0
+91 Votes: 0
+92 Votes: 0
+93 Votes: 0
+94 Votes: 0
+95 Votes: 0
+96 Votes: 0
+97 Votes: 0
+98 Votes: 0
+99 Votes: 0
+100 Votes: 0
+5 Votes: 0
+7 Votes: 0
+UNACCOUNTED VOTES IN THE MIX: 1
+Round 3
+Distributing Ballot 4 to 8
+8 reached Droop!!!
+LOSER IS 9 with size 1
+Candidate size is 2
+###STILL IN THE RUN###
+10 Votes: 1
+11 Votes: 1
+###ELECTED###
+2 Votes: 2
+1 Votes: 2
+3 Votes: 2
+4 Votes: 2
+6 Votes: 2
+8 Votes: 2
+###NON ELECTED###
+12 Votes: 0
+13 Votes: 0
+14 Votes: 0
+15 Votes: 0
+16 Votes: 0
+17 Votes: 0
+18 Votes: 0
+19 Votes: 0
+20 Votes: 0
+21 Votes: 0
+22 Votes: 0
+23 Votes: 0
+24 Votes: 0
+25 Votes: 0
+26 Votes: 0
+27 Votes: 0
+28 Votes: 0
+29 Votes: 0
+30 Votes: 0
+31 Votes: 0
+32 Votes: 0
+33 Votes: 0
+34 Votes: 0
+35 Votes: 0
+36 Votes: 0
+37 Votes: 0
+38 Votes: 0
+39 Votes: 0
+40 Votes: 0
+41 Votes: 0
+42 Votes: 0
+43 Votes: 0
+44 Votes: 0
+45 Votes: 0
+46 Votes: 0
+47 Votes: 0
+48 Votes: 0
+49 Votes: 0
+50 Votes: 0
+51 Votes: 0
+52 Votes: 0
+53 Votes: 0
+54 Votes: 0
+55 Votes: 0
+56 Votes: 0
+57 Votes: 0
+58 Votes: 0
+59 Votes: 0
+60 Votes: 0
+61 Votes: 0
+62 Votes: 0
+63 Votes: 0
+64 Votes: 0
+65 Votes: 0
+66 Votes: 0
+67 Votes: 0
+68 Votes: 0
+69 Votes: 0
+70 Votes: 0
+71 Votes: 0
+72 Votes: 0
+73 Votes: 0
+74 Votes: 0
+75 Votes: 0
+76 Votes: 0
+77 Votes: 0
+78 Votes: 0
+79 Votes: 0
+80 Votes: 0
+81 Votes: 0
+82 Votes: 0
+83 Votes: 0
+84 Votes: 0
+85 Votes: 0
+86 Votes: 0
+87 Votes: 0
+88 Votes: 0
+89 Votes: 0
+90 Votes: 0
+91 Votes: 0
+92 Votes: 0
+93 Votes: 0
+94 Votes: 0
+95 Votes: 0
+96 Votes: 0
+97 Votes: 0
+98 Votes: 0
+99 Votes: 0
+100 Votes: 0
+5 Votes: 0
+7 Votes: 0
+9 Votes: 0
+UNACCOUNTED VOTES IN THE MIX: 1
+Round 4
+Distributing Ballot 6 to 10
+10 reached Droop!!!
+LOSER IS 11 with size 1
+Candidate size is 0
+###STILL IN THE RUN###
+###ELECTED###
+2 Votes: 2
+1 Votes: 2
+3 Votes: 2
+4 Votes: 2
+6 Votes: 2
+8 Votes: 2
+10 Votes: 2
+###NON ELECTED###
+12 Votes: 0
+13 Votes: 0
+14 Votes: 0
+15 Votes: 0
+16 Votes: 0
+17 Votes: 0
+18 Votes: 0
+19 Votes: 0
+20 Votes: 0
+21 Votes: 0
+22 Votes: 0
+23 Votes: 0
+24 Votes: 0
+25 Votes: 0
+26 Votes: 0
+27 Votes: 0
+28 Votes: 0
+29 Votes: 0
+30 Votes: 0
+31 Votes: 0
+32 Votes: 0
+33 Votes: 0
+34 Votes: 0
+35 Votes: 0
+36 Votes: 0
+37 Votes: 0
+38 Votes: 0
+39 Votes: 0
+40 Votes: 0
+41 Votes: 0
+42 Votes: 0
+43 Votes: 0
+44 Votes: 0
+45 Votes: 0
+46 Votes: 0
+47 Votes: 0
+48 Votes: 0
+49 Votes: 0
+50 Votes: 0
+51 Votes: 0
+52 Votes: 0
+53 Votes: 0
+54 Votes: 0
+55 Votes: 0
+56 Votes: 0
+57 Votes: 0
+58 Votes: 0
+59 Votes: 0
+60 Votes: 0
+61 Votes: 0
+62 Votes: 0
+63 Votes: 0
+64 Votes: 0
+65 Votes: 0
+66 Votes: 0
+67 Votes: 0
+68 Votes: 0
+69 Votes: 0
+70 Votes: 0
+71 Votes: 0
+72 Votes: 0
+73 Votes: 0
+74 Votes: 0
+75 Votes: 0
+76 Votes: 0
+77 Votes: 0
+78 Votes: 0
+79 Votes: 0
+80 Votes: 0
+81 Votes: 0
+82 Votes: 0
+83 Votes: 0
+84 Votes: 0
+85 Votes: 0
+86 Votes: 0
+87 Votes: 0
+88 Votes: 0
+89 Votes: 0
+90 Votes: 0
+91 Votes: 0
+92 Votes: 0
+93 Votes: 0
+94 Votes: 0
+95 Votes: 0
+96 Votes: 0
+97 Votes: 0
+98 Votes: 0
+99 Votes: 0
+100 Votes: 0
+5 Votes: 0
+7 Votes: 0
+9 Votes: 0
+11 Votes: 0
+UNACCOUNTED VOTES IN THE MIX: 1
+Droop: 2
+THE WINNERS ARE: 2, 1, 3, 4, 6, 8, 10

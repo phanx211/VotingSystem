@@ -130,6 +130,7 @@ void BallotList::ReadFile(string filename, int num_ballots) {
 	infile.open(filename.c_str());
 	string data;
 	getline(infile,data,'\n');
+	getline(infile,data,'\n');
 	for (int i=0; i<num_ballots; i++) {
 		getline(infile,data,'\n');
 		MakeBallot(data);

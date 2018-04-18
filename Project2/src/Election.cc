@@ -43,6 +43,7 @@ void Election::ReadNames(string filename) {
   infile.open(filename.c_str());
   string data;
   getline(infile, data, '\n');
+  getline(infile, data, '\n');
   istringstream ss(data);
   string token;
   int count = 1;

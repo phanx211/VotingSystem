@@ -22,22 +22,31 @@ int main(int argc, char *argv[]) {
   string no_bals;
   string vote_type_;
   string filename;
+
   cout << endl << "##########################################" << endl;
   cout << "Welcome to the best election system in the world. We are pleased to "
           "take your ballots and let you know who your winners are."
        << endl;
   cout << "##########################################" << endl << endl;
-  cout << "Enter number of candidates: ";
-  getline(cin, no_cands);
-  cout << "Enter number of seats: ";
-  getline(cin, no_seats);
-  cout << "Enter number of ballots: ";
-  getline(cin, no_bals);
-  cout << "Enter voting type (Plurality or STV, case sensitive): ";
-  getline(cin, vote_type_);
-  cout << "Enter the filename of the csv file: ";
-  getline(cin, filename);
-  cout << "The election process has been recorded in log.txt." << endl;
+
+  if (argc < 2) {
+    cout << "Enter filename of the csv file: ";
+    getline(cin, filename);
+  }
+  else {
+    filename = argv[1];
+    cout << "Filename entered: " << filename << endl;
+  }
+
+  // cout << "Enter number of candidates: ";
+  // getline(cin, no_cands);
+  // cout << "Enter number of seats: ";
+  // getline(cin, no_seats);
+  // cout << "Enter number of ballots: ";
+  // getline(cin, no_bals);
+  // cout << "Enter voting type (Plurality or STV, case sensitive): ";
+  // getline(cin, vote_type_);
+  // cout << "The election process has been recorded in log.txt." << endl;
 
   freopen("log.txt", "w", stdout);
   srand(time(NULL));  // Used for randomizing

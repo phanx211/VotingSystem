@@ -49,6 +49,19 @@ Ballot BallotList::RemoveBallot(int ballot_no) {
 	return temp;
 }
 
+void BallotList::ValidateBallots(int x) {
+	int i=0;
+	while (i<ballot_list.size()) {
+		if(ballot_list[i].CountVotes()<x){
+			std::cout << "Ballot " << ballot_list[i].get_ballot_no() << " removed due to insufficient votes." << '\n';
+			ballot_list.erase(ballot_list.begin()+i);
+		}
+		else {
+			i++;
+		}
+	}
+}
+
 // Adds a ballot to ballot_list
 void BallotList::AddBallot(Ballot ballot) {
 	ballot_list.push_back(ballot);

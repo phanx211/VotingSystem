@@ -28,7 +28,7 @@
 	* and remove the Ballots from the this array.
   */
 class BallotList {
-	
+
 	public:
 		//Constructors
 		BallotList();
@@ -93,6 +93,8 @@ class BallotList {
 		* @param num_ballots the number of ballots to read.
 		*/
 		void ReadFile(std::string filename, int num_ballots);
+
+		void ValidateBallots(int x);
 
 	private:
 		int num_ballots;

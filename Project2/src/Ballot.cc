@@ -23,3 +23,13 @@ Ballot::Ballot(int num, std::vector<int> vote) {
 	this->current = 1;
 
 }
+
+int Ballot::CountVotes() {
+	int count=0;
+	for (int i=0; i<votes.size(); i++) {
+		if (votes[i] != 0) {
+			count++;
+		}
+	}
+	return count;
+}

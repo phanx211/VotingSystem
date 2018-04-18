@@ -80,9 +80,30 @@ void STV::Algorithm() {
   int bal_no;
   string highest_name;
   int itr = get_num_ballots();
+  std::cout << "Validating Ballots: " << '\n';
+
+  int half;
+  // If odd
+  if (get_num_candidates()%2) {
+    half=(get_num_candidates()/2)+1;
+  }
+  else {
+    half=(get_num_candidates()/2);
+  }
+  get_ballots().ValidateBallots(half);
+  // Sets num_ballots to new value
+  set_num_ballots(get_ballots().get_ballot_list().size());
+  // Recalculate Droop
+  CalculateDroop();
+
+
+
 
   // Shuffle ballots before running election
   get_ballots().ShuffleBallots();
+
+
+
 
   // While seats are not filled
   while (get_elected().ListSize() != get_num_seats()) {

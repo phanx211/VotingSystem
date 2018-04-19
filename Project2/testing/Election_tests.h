@@ -47,4 +47,14 @@ class ElectionTestSuite : public CxxTest::TestSuite {
       TS_ASSERT(e.get_candidates().get_candidate_list()[2].get_name() == "[C]");
       TS_ASSERT(e.get_candidates().get_candidate_list()[3].get_name() == "[D]\r");
     }
+
+	// test added for Scrum CSV parameter integration PBI
+	void test_read_parameters() {
+	  Election e;
+	  e.ReadParameters("testing/test.csv");
+	  TS_ASSERT(e.get_num_candidates() == 4);
+	  TS_ASSERT(e.get_num_seats() == 2);
+	  TS_ASSERT(e.get_num_ballots() == 3);
+	  TS_ASSERT(e.get_election_type() == "Plurality");
+	}
 };

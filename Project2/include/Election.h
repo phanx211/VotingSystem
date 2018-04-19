@@ -87,6 +87,18 @@ class Election {
 		void set_num_ballots(int b) {num_ballots = b;}
 
 		/**
+		* @brief Gets the election type
+		*/
+		string get_election_type() { return election_type; }
+
+		/**
+		* @brief Sets the election type (s) to the local variable (election_type) to store the value of the election type for the election
+		*
+		* @param b Store the number of ballots
+		*/
+		void set_election_type(string s) { election_type = s; }
+
+		/**
 		* @brief Returns the list of candidates in election
 		*/
 		CandidateList& get_candidates() {return candidates;}

@@ -43,10 +43,11 @@ void Election::ReadParameters(string filename) {
 	ifstream infile;
 	infile.open(filename.c_str());
 	string data;
-	geline(infile, data, '\n');
+	getline(infile, data, '\n');
 	istringstream ss(data);
 	string token;
 	std::vector<string> parameters;
+	int count = 1;
 	
 	while (getline(ss, token, ',')) {
 		if (count == 4) {
@@ -57,10 +58,10 @@ void Election::ReadParameters(string filename) {
 		count++;
 	}
 
-	this->num_candidates = atoi(parameters[0].c_str);
-	this->num_seats = atoi(parameters[1].c_str);
-	this->num_ballots = atoi(parameters[2].c_str);
-	this->election_type = parameters[3].c_str;
+	this->num_candidates = atoi(parameters[0].c_str());
+	this->num_seats = atoi(parameters[1].c_str());
+	this->num_ballots = atoi(parameters[2].c_str());
+	this->election_type = parameters[3];
 }
 
 void Election::ReadNames(string filename) {

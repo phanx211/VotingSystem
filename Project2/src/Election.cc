@@ -38,6 +38,31 @@ void Election::MoveBallot(int bal_no, BallotList& src, BallotList& dst) {
 
 // Reads through the first line of the csv (the name of the candidates) and adds
 // each candidate to the list by their name.
+
+void Election::ReadParameters(string filename) {
+	ifstream infile;
+	infile.open(filename.c_str());
+	string data;
+	geline(infile, data, '\n');
+	istringstream ss(data);
+	string token;
+	std::vector<string> parameters;
+	
+	while (getline(ss, token, ',')) {
+		if (count == 4) {
+			parameters.push_back(token.substr(0, token.find('\r')));
+		} else {
+			parameters.push_back(token);
+		}
+		count++;
+	}
+
+	this->num_candidates = atoi(parameters[0].c_str);
+	this->num_seats = atoi(parameters[1].c_str);
+	this->num_ballots = atoi(parameters[2].c_str);
+	this->election_type = parameters[3].c_str;
+}
+
 void Election::ReadNames(string filename) {
   ifstream infile;
   infile.open(filename.c_str());

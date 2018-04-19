@@ -139,6 +139,11 @@ class Election {
 		*/
 		void ReadNames(string filename);
 
+		/**
+		* @brief Reads the csv file to initialize the election parameters
+		*/
+		void ReadParameters(string filename);
+
 		CandidateList& get_elected() {return elected;}
 
 		CandidateList& get_non_elected() {return non_elected;}
@@ -147,6 +152,7 @@ class Election {
 		int num_seats;
 		int num_candidates;
 		int num_ballots;
+		string election_type;
 		CandidateList candidates;
 		vector<string> names;
 		CandidateList elected;

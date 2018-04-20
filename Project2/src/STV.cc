@@ -80,7 +80,13 @@ void STV::Algorithm() {
   int bal_no;
   string highest_name;
   int itr = get_num_ballots();
+  ofstream logFile;
+  logFile.open("logFile.txt");
+
+
   std::cout << "Validating Ballots: " << '\n';
+  logFile << "Validating Ballots: " << '\n';
+
 
   int half;
   // If odd
@@ -111,6 +117,7 @@ void STV::Algorithm() {
       break;
     }
     std::cout << "Round " << rnd << '\n';
+    logFile << "Round " << rnd << '\n';
 
     // This for loop handles all the ballots in the unassigned pile. It
     // iterates until all ballots have been distributed to some candidate.
@@ -123,7 +130,11 @@ void STV::Algorithm() {
       } else {
         std::cout << "Distributing Ballot "
                   << get_ballots().get_ballot_list()[0].get_ballot_no();
+        logFile << "Distributing Ballot "
+                  << get_ballots().get_ballot_list()[0].get_ballot_no();
+
         std::cout << " to " << highest_name << '\n';
+        logFile << " to " << highest_name << '\n';
 
         // Gets ballot no of current ballot
         bal_no = get_ballots().get_ballot_list()[0].get_ballot_no();
@@ -136,6 +147,7 @@ void STV::Algorithm() {
         // CHECK IF REACHES DROOP
         if (receiver.get_votes().ListSize() == droop) {
           std::cout << receiver.get_name() << " reached Droop!!!" << '\n';
+          logFile << receiver.get_name() << " reached Droop!!!" << '\n';
           MoveCandidate(highest_name, get_candidates(), get_elected());
         }
       }
@@ -155,7 +167,11 @@ void STV::Algorithm() {
     if (get_candidates().ListSize() > 0) {
       string losername = get_candidates().ReturnLoser().get_name();
       std::cout << "LOSER IS " << losername;
+      logFile << "LOSER IS " << losername;
       std::cout << " with size "
+                << get_candidates().ReturnLoser().get_votes().ListSize()
+                << '\n';
+      logFile << " with size "
                 << get_candidates().ReturnLoser().get_votes().ListSize()
                 << '\n';
 
@@ -174,32 +190,52 @@ void STV::Algorithm() {
     // DEBUGGING PRINTS
     std::cout << "Candidate size is "
               << get_candidates().get_candidate_list().size() << '\n';
+    logFile << "Candidate size is "
+              << get_candidates().get_candidate_list().size() << '\n';
     std::cout << "###STILL IN THE RUN###" << '\n';
+    logFile << "###STILL IN THE RUN###" << '\n';
     for (unsigned i = 0; i < get_candidates().get_candidate_list().size();
          i++) {
-      cout << get_candidates().get_candidate_list()[i].get_name();
+      std::cout << get_candidates().get_candidate_list()[i].get_name();
       cout << " Votes: "
            << get_candidates().get_candidate_list()[i].get_votes().ListSize()
            << endl;
+       logFile << " Votes: "
+            << get_candidates().get_candidate_list()[i].get_votes().ListSize()
+            << endl;
     }
     std::cout << "###ELECTED###" << '\n';
+    logFile << "###ELECTED###" << '\n';
     for (unsigned i = 0; i < get_elected().get_candidate_list().size(); i++) {
       cout << get_elected().get_candidate_list()[i].get_name();
+      logFile << get_elected().get_candidate_list()[i].get_name();
+
       cout << " Votes: "
            << get_elected().get_candidate_list()[i].get_votes().ListSize()
            << endl;
+      logFile << " Votes: "
+          << get_elected().get_candidate_list()[i].get_votes().ListSize()
+          << endl;
     }
 
     std::cout << "###NON ELECTED###" << '\n';
+    logFile << "###NON ELECTED###" << '\n';
     for (unsigned i = 0; i < get_non_elected().get_candidate_list().size();
          i++) {
       cout << get_non_elected().get_candidate_list()[i].get_name();
+      logFile << get_non_elected().get_candidate_list()[i].get_name();
+
       cout << " Votes: "
            << get_non_elected().get_candidate_list()[i].get_votes().ListSize()
            << endl;
+       logFile << " Votes: "
+            << get_non_elected().get_candidate_list()[i].get_votes().ListSize()
+            << endl;
     }
     std::cout << "UNACCOUNTED VOTES IN THE MIX: " << get_ballots().ListSize()
-              << '\n';
+            << '\n';
+    logFile << "UNACCOUNTED VOTES IN THE MIX: " << get_ballots().ListSize()
+            << '\n';
 
     rnd++;
   }
@@ -236,4 +272,5 @@ void STV::Algorithm() {
   }
   cout << endl << "##########################################" << endl;
   cout << endl;
+  logFile.close();
 }

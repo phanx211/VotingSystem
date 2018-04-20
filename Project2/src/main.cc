@@ -38,17 +38,6 @@ int main(int argc, char *argv[]) {
     cout << "Filename entered: " << filename << endl;
   }
 
-  // cout << "Enter number of candidates: ";
-  // getline(cin, no_cands);
-  // cout << "Enter number of seats: ";
-  // getline(cin, no_seats);
-  // cout << "Enter number of ballots: ";
-  // getline(cin, no_bals);
-  // cout << "Enter voting type (Plurality or STV, case sensitive): ";
-  // getline(cin, vote_type_);
-  // cout << "The election process has been recorded in log.txt." << endl;
-
-  freopen("log.txt", "w", stdout);
   srand(time(NULL));  // Used for randomizing
 
   Election election_type;

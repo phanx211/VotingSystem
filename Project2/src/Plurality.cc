@@ -39,6 +39,8 @@ int Plurality::ReturnHighestVoteIndex(Ballot b) {
 void Plurality::Algorithm() {
   int bal_no;
   int highest_index;
+  ofstream logFile;
+  logFile.open("logFile.txt");
 
   // The following loop goes through the original list of ballots and
   // distributes
@@ -61,6 +63,9 @@ void Plurality::Algorithm() {
     cout << "Candidate: " << i << " Votes: "
          << get_candidates().get_candidate_list()[i].get_votes().ListSize()
          << endl;
+    logFile << "Candidate: " << i << " Votes: "
+        << get_candidates().get_candidate_list()[i].get_votes().ListSize()
+        << endl;
   }
 
   // Run the ReturnWinners function from candidate_list which will fill a winner
@@ -70,20 +75,22 @@ void Plurality::Algorithm() {
   // This section writes to the log file.
   if (get_num_seats() > 1) {
     cout << "THE WINNERS ARE: ";
+    logFile << "THE WINNERS ARE: ";
   } else {
     cout << "THE WINNER IS: ";
+    logFile << "THE WINNER IS: ";
   }
   for (unsigned i = 0; i < winners.size(); i++) {
     cout << winners[i].get_name();
+    logFile << winners[i].get_name();
     if (i < winners.size() - 1) {
       cout << ", ";
+        logFile << ", ";
     }
   }
   cout << endl;
+  logFile << endl;
 
-  freopen("/dev/tty", "a", stdout); // This command redirects print
-                                    // statements to the console
-                                    // so the following section is displayed.
   cout << endl << "##########################################" << endl;
   if (get_num_seats() > 1) {
     cout << "THE WINNERS ARE: ";
@@ -98,4 +105,5 @@ void Plurality::Algorithm() {
   }
   cout << endl << "##########################################" << endl;
   cout << endl;
+  logFile.close();
 }

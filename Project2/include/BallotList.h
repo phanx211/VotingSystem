@@ -94,6 +94,12 @@ class BallotList {
 		*/
 		void ReadFile(std::string filename, int num_ballots);
 
+		/**
+		* @brief Goes through each ballot inside the ballot list and deletes any
+		* ballots that has less votes than half of the candidates.
+		*
+		* @param x (number of candidates/2)\
+		*/
 		void ValidateBallots(int x);
 
 	private:

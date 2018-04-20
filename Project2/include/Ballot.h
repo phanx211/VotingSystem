@@ -67,8 +67,12 @@ class Ballot {
 		*/
 		void set_votes(std::vector<int> vote) {votes = vote;}
 
+		/**
+		* @brief Counts how many votes there are in a ballot, done by reading how
+		* many non 0 values is in the ballot array
+		*/
 		int CountVotes();
-		
+
 	private:
 		int ballot_no;
 		std::vector<int> votes;

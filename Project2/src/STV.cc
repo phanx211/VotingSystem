@@ -83,6 +83,7 @@ void STV::Algorithm() {
   ofstream logFile, audit;
   logFile.open("logFile.txt");
 
+	//Things to add to audit 
   audit.open("Audit.txt");
   audit << "STV" << endl;
 

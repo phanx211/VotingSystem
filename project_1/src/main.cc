@@ -40,6 +40,12 @@ int main(int argc, char *argv[]) {
   cout << "The election process has been recorded in log.txt." << endl;
 
   freopen("log.txt", "w", stdout);
+  fclose(stdout); 
+  
+  //Audit File in addition to Log 
+  freopen("audit.txt", "w", stdout); 
+  
+  
   srand(time(NULL));  // Used for randomizing
 
 

@@ -80,8 +80,26 @@ void STV::Algorithm() {
   int bal_no;
   string highest_name;
   int itr = get_num_ballots();
-  ofstream logFile;
+  ofstream logFile, audit;
   logFile.open("logFile.txt");
+
+  audit.open("Audit.txt");
+  audit << "STV" << endl;
+
+  // current date/time based on current system
+  time_t now = time(0);
+  //cout << "Number of sec since January 1,1970:" << now << endl;
+  tm *ltm = localtime(&now);
+  // print various components of tm structure.
+ audit << "The Date is: " << ltm-> tm_mday << " " << 1 + ltm-> tm_mon << " " << 1900 + ltm->tm_year<<endl ;
+
+  // Elliminate all candidates who don't have any votes for them.
+  for (unsigned i = 0; i < get_candidates().get_candidate_list().size(); i++)
+  {
+      audit << "Candidate Names: " << get_candidates().get_candidate_list()[i].get_name() << endl;
+  }
+
+  audit << "Number of Candidates: " << get_num_candidates() << endl;
 
 
   std::cout << "Validating Ballots: " << '\n';
@@ -240,20 +258,26 @@ void STV::Algorithm() {
     rnd++;
   }
 
-  // This section writes to the log file.
+  // This section writes to the log file and audit file .
   cout << "Droop: " << droop << endl;
   if (get_num_seats() > 1) {
     cout << "THE WINNERS ARE: ";
+    audit << "The Winners Are: ";
   } else {
     cout << "THE WINNER IS: ";
+    audit << "THE WINNER IS: ";
   }
   for (unsigned i = 0; i < get_elected().ListSize(); i++) {
     cout << get_elected().get_candidate_list()[i].get_name();
+    audit << get_elected().get_candidate_list()[i].get_name();
+
     if (i < get_elected().ListSize() - 1) {
       cout << ", ";
+      audit << ", ";
     }
   }
   cout << endl;
+  audit << endl;
 
   freopen("/dev/tty", "a", stdout); // This command redirects print
                                     // statements to the console
@@ -261,16 +285,23 @@ void STV::Algorithm() {
   cout << endl << "##########################################" << endl;
   if (get_num_seats() > 1) {
     cout << "THE WINNERS ARE: ";
+    //audit << "THE WINNERS ARE: ";
+
   } else {
     cout << "THE WINNER IS: ";
+    //audit << "THE WINNER IS: ";
   }
   for (unsigned i = 0; i < get_elected().ListSize(); i++) {
     cout << get_elected().get_candidate_list()[i].get_name();
+    //audit << get_elected().get_candidate_list()[i].get_name();
+
     if (i < get_elected().ListSize() - 1) {
       cout << ", ";
+    //  audit << ", ";
     }
   }
   cout << endl << "##########################################" << endl;
   cout << endl;
   logFile.close();
+  audit.close();
 }

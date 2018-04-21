@@ -49,6 +49,7 @@ void Plurality::Algorithm() {
   audit << "Plurality" << endl;
   for (unsigned i = 0; i < get_candidates().get_candidate_list().size(); i++)
   {
+	  //getting candidate names
       audit << "Candidate Names: " << get_candidates().get_candidate_list()[i].get_name() << endl;
   }
   audit << "Number of Candidates: " << get_num_candidates() << endl;

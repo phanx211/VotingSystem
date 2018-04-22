@@ -21,6 +21,7 @@ class BallotTestSuite : public CxxTest::TestSuite {
       TS_ASSERT(b.get_votes()[0] == 1 && b.get_votes()[1] == 2);
     }
 
+    // test added for Scrum Ballot validation PBI
     void test_count_votes() {
       vector<int> v;
       v.push_back(1);

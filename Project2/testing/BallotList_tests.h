@@ -52,6 +52,7 @@ class BallotListTestSuite : public CxxTest::TestSuite {
   		}
     }
 
+    // test added for Scrum Ballot validation PBI
     void test_validate_ballots() {
       BallotList b;
   		b.ReadFile("testing/test4.csv",4);

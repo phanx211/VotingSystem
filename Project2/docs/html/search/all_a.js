@@ -5,6 +5,7 @@ var searchData=
   ['set_5fballots',['set_ballots',['../class_election.html#a4bf9c6eb717929f143ea89718cb09fe9',1,'Election']]],
   ['set_5fcandidate_5flist',['set_candidate_list',['../class_candidate_list.html#a541bbc8c8b05edadc46c72567a5c446a',1,'CandidateList']]],
   ['set_5fdroop',['set_droop',['../class_s_t_v.html#a3bb1ea48a3d11d9e02ee8d5892557bdd',1,'STV']]],
+  ['set_5felection_5ftype',['set_election_type',['../class_election.html#a5d08c46134fa0e59988138258ab53eed',1,'Election']]],
   ['set_5fnum_5fballots',['set_num_ballots',['../class_ballot_list.html#abc969edf27fe35f064322fb02e1180a9',1,'BallotList::set_num_ballots()'],['../class_election.html#ae8f4cc654d20ae3677f01584a62d33d0',1,'Election::set_num_ballots()']]],
   ['set_5fnum_5fcandidates',['set_num_candidates',['../class_election.html#ad73c41e88247a694c44370b4d28c04d0',1,'Election']]],
   ['set_5fvotes',['set_votes',['../class_ballot.html#ad9ea6ccae93d16136d60b5847c36c7b0',1,'Ballot::set_votes()'],['../class_election.html#a726cbdaaca392d54675954d6d86f10f0',1,'Election::set_votes()']]],

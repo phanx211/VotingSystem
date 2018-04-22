@@ -12,26 +12,29 @@ An object containing the voting ballots.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_ballot_af9078126260b3f58ea91f6b82797396b}{Ballot}} ()
+\hyperlink{class_ballot_af9078126260b3f58ea91f6b82797396b}{Ballot} ()
 \item 
-\mbox{\hyperlink{class_ballot_afdbfa652a622a1d5aad8ec911a29a91f}{Ballot}} (int num, std\+::vector$<$ int $>$ vote)
+\hyperlink{class_ballot_afdbfa652a622a1d5aad8ec911a29a91f}{Ballot} (int num, std\+::vector$<$ int $>$ vote)
 \begin{DoxyCompactList}\small\item\em Creates a ballot that contains the ballot number and the voters corresponding votes. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_ballot_ae68cc4486852163b21b85d0b96916a5e}\label{class_ballot_ae68cc4486852163b21b85d0b96916a5e}} 
-int \mbox{\hyperlink{class_ballot_ae68cc4486852163b21b85d0b96916a5e}{get\+\_\+ballot\+\_\+no}} ()
+int \hyperlink{class_ballot_ae68cc4486852163b21b85d0b96916a5e}{get\+\_\+ballot\+\_\+no} ()\hypertarget{class_ballot_ae68cc4486852163b21b85d0b96916a5e}{}\label{class_ballot_ae68cc4486852163b21b85d0b96916a5e}
+
 \begin{DoxyCompactList}\small\item\em Gets the ballot number from the class. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_ballot_a0a0775b462086988e8fc43b2afa27493}\label{class_ballot_a0a0775b462086988e8fc43b2afa27493}} 
-int {\bfseries get\+\_\+current} ()
+int {\bfseries get\+\_\+current} ()\hypertarget{class_ballot_a0a0775b462086988e8fc43b2afa27493}{}\label{class_ballot_a0a0775b462086988e8fc43b2afa27493}
+
 \item 
-\mbox{\Hypertarget{class_ballot_afbd626a534165145a4e60cc9519d3123}\label{class_ballot_afbd626a534165145a4e60cc9519d3123}} 
-void {\bfseries set\+\_\+current} (int c)
+void {\bfseries set\+\_\+current} (int c)\hypertarget{class_ballot_afbd626a534165145a4e60cc9519d3123}{}\label{class_ballot_afbd626a534165145a4e60cc9519d3123}
+
 \item 
-void \mbox{\hyperlink{class_ballot_a72f501296fc05e981791b5b380cc5152}{set\+\_\+ballot\+\_\+no}} (int b\+\_\+no)
+void \hyperlink{class_ballot_a72f501296fc05e981791b5b380cc5152}{set\+\_\+ballot\+\_\+no} (int b\+\_\+no)
 \begin{DoxyCompactList}\small\item\em Sets the ballot number (b\+\_\+no) to the local variable (ballot\+\_\+no) to store the ballot number. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{class_ballot_aa276dba8f1cc470e04c6d71ad801fc5e}\label{class_ballot_aa276dba8f1cc470e04c6d71ad801fc5e}} 
-std\+::vector$<$ int $>$ {\bfseries get\+\_\+votes} ()
+std\+::vector$<$ int $>$ {\bfseries get\+\_\+votes} ()\hypertarget{class_ballot_aa276dba8f1cc470e04c6d71ad801fc5e}{}\label{class_ballot_aa276dba8f1cc470e04c6d71ad801fc5e}
+
 \item 
-void \mbox{\hyperlink{class_ballot_ad9ea6ccae93d16136d60b5847c36c7b0}{set\+\_\+votes}} (std\+::vector$<$ int $>$ vote)
-\begin{DoxyCompactList}\small\item\em Sets the \char`\"{}vote\char`\"{} vector that contains all the ballot votes to the class variable \char`\"{}votes\char`\"{} vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+void \hyperlink{class_ballot_ad9ea6ccae93d16136d60b5847c36c7b0}{set\+\_\+votes} (std\+::vector$<$ int $>$ vote)
+\begin{DoxyCompactList}\small\item\em Sets the \char`\"{}vote\char`\"{} vector that contains all the ballot votes to the class variable \char`\"{}votes\char`\"{} vector. \end{DoxyCompactList}\item 
+int \hyperlink{class_ballot_ac295163d2eab34ce622d283aabc27b9d}{Count\+Votes} ()\hypertarget{class_ballot_ac295163d2eab34ce622d283aabc27b9d}{}\label{class_ballot_ac295163d2eab34ce622d283aabc27b9d}
+
+\begin{DoxyCompactList}\small\item\em Counts how many votes there are in a ballot, done by reading how many non 0 values is in the ballot array. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
@@ -39,31 +42,34 @@ An object containing the voting ballots.
 
 
 
- Name \+: \mbox{\hyperlink{_ballot_8h_source}{Ballot.\+h}} Project \+: Voting System Description \+: Header file for \mbox{\hyperlink{class_ballot}{Ballot}} Original Authors \+: Maxwell Dahl, Sanjana Jonnalagadda, Anthony Phan, Ronny Yogiswara
+ Name \+: \hyperlink{_ballot_8h_source}{Ballot.\+h} Project \+: Voting System Description \+: Header file for \hyperlink{class_ballot}{Ballot} Original Authors \+: Maxwell Dahl, Sanjana Jonnalagadda, Anthony Phan, Ronny Yogiswara
 
 
 
  Includes
 \begin{DoxyItemize}
-\item The \mbox{\hyperlink{class_ballot}{Ballot}} class will be the main structure to instantiate each voting ballot.
-\item The \mbox{\hyperlink{class_ballot}{Ballot}} class stores the ballot number, the voting type pertaining to the ballot, and the votes for that ballot candidates 
+\item The \hyperlink{class_ballot}{Ballot} class will be the main structure to instantiate each voting ballot.
+\item The \hyperlink{class_ballot}{Ballot} class stores the ballot number, the voting type pertaining to the ballot, and the votes for that ballot candidates 
 \end{DoxyItemize}
 
 \subsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_ballot_af9078126260b3f58ea91f6b82797396b}\label{class_ballot_af9078126260b3f58ea91f6b82797396b}} 
 \index{Ballot@{Ballot}!Ballot@{Ballot}}
 \index{Ballot@{Ballot}!Ballot@{Ballot}}
-\subsubsection{\texorpdfstring{Ballot()}{Ballot()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily Ballot\+::\+Ballot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\subsubsection[{\texorpdfstring{Ballot()}{Ballot()}}]{\setlength{\rightskip}{0pt plus 5cm}Ballot\+::\+Ballot (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_ballot_af9078126260b3f58ea91f6b82797396b}{}\label{class_ballot_af9078126260b3f58ea91f6b82797396b}
 
 
-
- Name \+: Ballot.\+cc Project \+: Voting System Description \+: Implementation file for \mbox{\hyperlink{class_ballot}{Ballot}} Original Authors \+: Maxwell Dahl, Sanjana Jonnalagadda, Anthony Phan, Ronny Yogiswara \mbox{\Hypertarget{class_ballot_afdbfa652a622a1d5aad8ec911a29a91f}\label{class_ballot_afdbfa652a622a1d5aad8ec911a29a91f}} 
+ Name \+: Ballot.\+cc Project \+: Voting System Description \+: Implementation file for \hyperlink{class_ballot}{Ballot} Original Authors \+: Maxwell Dahl, Sanjana Jonnalagadda, Anthony Phan, Ronny Yogiswara \index{Ballot@{Ballot}!Ballot@{Ballot}}
 \index{Ballot@{Ballot}!Ballot@{Ballot}}
-\index{Ballot@{Ballot}!Ballot@{Ballot}}
-\subsubsection{\texorpdfstring{Ballot()}{Ballot()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily Ballot\+::\+Ballot (\begin{DoxyParamCaption}\item[{int}]{num,  }\item[{std\+::vector$<$ int $>$}]{vote }\end{DoxyParamCaption})}
-
+\subsubsection[{\texorpdfstring{Ballot(int num, std\+::vector$<$ int $>$ vote)}{Ballot(int num, std::vector< int > vote)}}]{\setlength{\rightskip}{0pt plus 5cm}Ballot\+::\+Ballot (
+\begin{DoxyParamCaption}
+\item[{int}]{num, }
+\item[{std\+::vector$<$ int $>$}]{vote}
+\end{DoxyParamCaption}
+)}\hypertarget{class_ballot_afdbfa652a622a1d5aad8ec911a29a91f}{}\label{class_ballot_afdbfa652a622a1d5aad8ec911a29a91f}
 
 
 Creates a ballot that contains the ballot number and the voters corresponding votes. 
@@ -78,12 +84,13 @@ Creates a ballot that contains the ballot number and the voters corresponding vo
 
 
 \subsection{Member Function Documentation}
-\mbox{\Hypertarget{class_ballot_a72f501296fc05e981791b5b380cc5152}\label{class_ballot_a72f501296fc05e981791b5b380cc5152}} 
 \index{Ballot@{Ballot}!set\+\_\+ballot\+\_\+no@{set\+\_\+ballot\+\_\+no}}
 \index{set\+\_\+ballot\+\_\+no@{set\+\_\+ballot\+\_\+no}!Ballot@{Ballot}}
-\subsubsection{\texorpdfstring{set\+\_\+ballot\+\_\+no()}{set\_ballot\_no()}}
-{\footnotesize\ttfamily void Ballot\+::set\+\_\+ballot\+\_\+no (\begin{DoxyParamCaption}\item[{int}]{b\+\_\+no }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
+\subsubsection[{\texorpdfstring{set\+\_\+ballot\+\_\+no(int b\+\_\+no)}{set_ballot_no(int b_no)}}]{\setlength{\rightskip}{0pt plus 5cm}void Ballot\+::set\+\_\+ballot\+\_\+no (
+\begin{DoxyParamCaption}
+\item[{int}]{b\+\_\+no}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ballot_a72f501296fc05e981791b5b380cc5152}{}\label{class_ballot_a72f501296fc05e981791b5b380cc5152}
 
 
 Sets the ballot number (b\+\_\+no) to the local variable (ballot\+\_\+no) to store the ballot number. 
@@ -93,12 +100,13 @@ Sets the ballot number (b\+\_\+no) to the local variable (ballot\+\_\+no) to sto
 {\em b\+\_\+no} & Store the ballot number. \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{class_ballot_ad9ea6ccae93d16136d60b5847c36c7b0}\label{class_ballot_ad9ea6ccae93d16136d60b5847c36c7b0}} 
 \index{Ballot@{Ballot}!set\+\_\+votes@{set\+\_\+votes}}
 \index{set\+\_\+votes@{set\+\_\+votes}!Ballot@{Ballot}}
-\subsubsection{\texorpdfstring{set\+\_\+votes()}{set\_votes()}}
-{\footnotesize\ttfamily void Ballot\+::set\+\_\+votes (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int $>$}]{vote }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
+\subsubsection[{\texorpdfstring{set\+\_\+votes(std\+::vector$<$ int $>$ vote)}{set_votes(std::vector< int > vote)}}]{\setlength{\rightskip}{0pt plus 5cm}void Ballot\+::set\+\_\+votes (
+\begin{DoxyParamCaption}
+\item[{std\+::vector$<$ int $>$}]{vote}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{class_ballot_ad9ea6ccae93d16136d60b5847c36c7b0}{}\label{class_ballot_ad9ea6ccae93d16136d60b5847c36c7b0}
 
 
 Sets the \char`\"{}vote\char`\"{} vector that contains all the ballot votes to the class variable \char`\"{}votes\char`\"{} vector. 

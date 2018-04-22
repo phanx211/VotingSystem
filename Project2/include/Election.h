@@ -32,7 +32,7 @@ using namespace std;
 */
 
 class Election {
-	
+
 	public:
 		//Constructors
 		Election();
@@ -94,7 +94,7 @@ class Election {
 		/**
 		* @brief Sets the election type (s) to the local variable (election_type) to store the value of the election type for the election
 		*
-		* @param b Store the number of ballots
+		* @param s Store the number of ballots
 		*/
 		void set_election_type(string s) { election_type = s; }
 

@@ -45,7 +45,7 @@ void Plurality::Algorithm() {
   audit.open("Audit.txt");
 
 //Things for audit file
-  audit.open("Audit.txt");
+  //audit.open("Audit.txt");
   audit << "Plurality" << endl;
   for (unsigned i = 0; i < get_candidates().get_candidate_list().size(); i++)
   {
@@ -106,6 +106,7 @@ void Plurality::Algorithm() {
   for (unsigned i = 0; i < winners.size(); i++) {
     cout << winners[i].get_name();
     logFile << winners[i].get_name();
+    audit << winners[i].get_name();
     if (i < winners.size() - 1) {
       cout << ", ";
         logFile << ", ";

@@ -52,6 +52,14 @@ class BallotListTestSuite : public CxxTest::TestSuite {
   		}
     }
 
+    void test_validate_ballots() {
+      BallotList b;
+  		b.ReadFile("testing/test4.csv",4);
+      TS_ASSERT(b.ListSize() == 4);
+      b.ValidateBallots(2);
+      TS_ASSERT(b.ListSize() == 2);
+    }
+
     void test_AddBallot() {
   		BallotList b;
   		vector<int> v;

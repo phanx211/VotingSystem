@@ -20,4 +20,14 @@ class BallotTestSuite : public CxxTest::TestSuite {
       TS_ASSERT(b.get_ballot_no() == 1);
       TS_ASSERT(b.get_votes()[0] == 1 && b.get_votes()[1] == 2);
     }
+
+    void test_count_votes() {
+      vector<int> v;
+      v.push_back(1);
+      v.push_back(0);
+      v.push_back(3);
+      v.push_back(2);
+      Ballot b(1,v);
+      TS_ASSERT(b.CountVotes() == 3);
+    }
 };

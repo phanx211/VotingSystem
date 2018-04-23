@@ -78,16 +78,29 @@ void Plurality::Algorithm() {
     MoveBallot(
         bal_no, get_ballots(),
         get_candidates().get_candidate_list()[highest_index].get_votes());
+
+    cout << "Round: " << i << endl;
+    logFile << "Round: " << i << endl;
+    for (unsigned j = 0; j < get_candidates().get_candidate_list().size(); j++) {
+      if (get_candidates().get_candidate_list()[j].get_votes().ListSize() > 0) {
+        cout << "Candidate: " << j << " Votes: "
+             << get_candidates().get_candidate_list()[j].get_votes().ListSize()
+             << endl;
+        logFile << "Candidate: " << j << " Votes: "
+            << get_candidates().get_candidate_list()[j].get_votes().ListSize()
+            << endl;
+      }
+    }
   }
 
-  for (unsigned i = 0; i < get_candidates().get_candidate_list().size(); i++) {
-    cout << "Candidate: " << i << " Votes: "
-         << get_candidates().get_candidate_list()[i].get_votes().ListSize()
-         << endl;
-    logFile << "Candidate: " << i << " Votes: "
-        << get_candidates().get_candidate_list()[i].get_votes().ListSize()
-        << endl;
-  }
+  // for (unsigned i = 0; i < get_candidates().get_candidate_list().size(); i++) {
+  //   cout << "Candidate: " << i << " Votes: "
+  //        << get_candidates().get_candidate_list()[i].get_votes().ListSize()
+  //        << endl
+  //   logFile << "Candidate: " << i << " Votes: "
+  //       << get_candidates().get_candidate_list()[i].get_votes().ListSize()
+  //       << endl;
+  // }
 
   // Run the ReturnWinners function from candidate_list which will fill a winner
   // vector with the candidates that won the seats

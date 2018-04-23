@@ -38,7 +38,7 @@ STV works by first shuffling the initial ballots. To turn this off, simply comme
 ```
 get_ballots().ShuffleBallots();
 ```
-which should be in line 85 of STV.cc in `src`.
+which should be in line 128 of STV.cc in `src`.
 
 ### Running Unit Tests
 
